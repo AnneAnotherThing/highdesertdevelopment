@@ -1,0 +1,3 @@
+# Images are tracked in the working tree but were kept out of git history
+# so the repo stays small. See reference/BASELINE-NOTE.md
+site/images/
