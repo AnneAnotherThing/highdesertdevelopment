@@ -4,7 +4,6 @@ const menuButton = document.querySelector('.menu-button');
 const navigation = document.querySelector('#primary-navigation');
 const serviceCards = document.querySelectorAll('.service-card');
 const projectForm = document.querySelector('#project-form');
-const dateTimeElements = document.querySelectorAll('.current-datetime');
 const videoDialog = document.querySelector('.video-dialog');
 const videoDialogPlayer = document.querySelector('.video-dialog-player');
 const videoDialogTitle = document.querySelector('#expanded-video-title');
@@ -33,18 +32,6 @@ function rememberService(category) {
   localStorage.setItem('hddLastService', JSON.stringify(visit));
 }
 
-function updateCurrentDateTime() {
-  const now = new Date();
-  const readableDateTime = now.toLocaleString(undefined, {
-    dateStyle: 'full',
-    timeStyle: 'medium'
-  });
-
-  dateTimeElements.forEach((element) => {
-    element.dateTime = `${now.toISOString()}`;
-    element.textContent = `${readableDateTime}`;
-  });
-}
 
 if (menuButton && navigation) {
   menuButton.addEventListener('click', toggleMenu);
@@ -113,12 +100,7 @@ if (projectForm) {
   }
 
   projectForm.addEventListener('submit', (event) => {
-    const formData = new FormData(projectForm);
-    const inquiry = Object.fromEntries(formData.entries());
-    localStorage.setItem('hddProjectInquiry', JSON.stringify(inquiry));
     formMessage.textContent = `Sending your project inquiry to High Desert Development…`;
   });
 }
 
-updateCurrentDateTime();
-setInterval(updateCurrentDateTime, 1000);

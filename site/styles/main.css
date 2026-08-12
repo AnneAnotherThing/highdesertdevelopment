@@ -100,10 +100,10 @@ h2 { margin: 0; color: var(--navy); font: 700 clamp(2rem, 5vw, 3.5rem)/1.08 Mont
 .new-website-button img { width: 62px; height: 62px; object-fit: contain; filter: brightness(0) saturate(100%) invert(94%) sepia(10%) saturate(378%) hue-rotate(344deg) brightness(104%) contrast(94%); }
 .new-website-button:hover, .new-website-button:focus-visible { background: var(--navy); }
 .new-website-button:focus-visible { outline: 3px solid var(--bronze-light); outline-offset: 3px; }
-.facebook-button { background: #1877f2; border-color: #8bbcff; }
-.facebook-button:hover, .facebook-button:focus-visible { background: #0f5fc7; }
+.facebook-button { background: transparent; border-color: rgb(255 255 255 / 45%); }
+.facebook-button:hover, .facebook-button:focus-visible { background: rgb(255 255 255 / 12%); border-color: var(--sand); }
 .footer-external-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
-.facebook-mark { display: grid; place-items: center; width: 42px; height: 42px; color: #1877f2; background: var(--white); border-radius: 50%; font: 800 2rem/1 Arial, sans-serif; text-transform: lowercase; }
+.facebook-mark { display: grid; place-items: center; width: 42px; height: 42px; color: var(--navy-dark); background: var(--sand); border-radius: 50%; font: 800 2rem/1 Arial, sans-serif; text-transform: lowercase; }
 .footer-new-website { display: grid; justify-items: center; gap: .8rem; padding-block: .75rem; text-align: center; }
 .footer-new-website > p { max-width: 660px; margin: 0; color: rgb(255 255 255 / 70%); font-size: .82rem; }
 .footer-new-website .veteran-discount { max-width: none; padding: .7rem 1.1rem; color: #ffe08a; background: rgb(255 224 138 / 10%); border: 1px solid #ffe08a; border-radius: 3px; font: 800 1.05rem/1.4 Montserrat, sans-serif; letter-spacing: .025em; }
@@ -208,3 +208,52 @@ h2 { margin: 0; color: var(--navy); font: 700 clamp(2rem, 5vw, 3.5rem)/1.08 Mont
   html { scroll-behavior: auto; }
   .service-card img { transition: none; }
 }
+
+
+/* ---- Hive-Rise additions ---- */
+
+/* tap-to-call */
+.tel-link { color: inherit; text-decoration: none; border-bottom: 1px solid currentColor; white-space: nowrap; }
+.tel-link:hover, .tel-link:focus-visible { color: var(--bronze-light); }
+
+/* proof bar under the hero */
+.proof-bar { background: var(--navy-dark); color: var(--white); border-bottom: 3px solid var(--bronze); }
+.proof-bar-inner { display: flex; flex-wrap: wrap; gap: 1.25rem 2.5rem; justify-content: space-between; padding: 1.1rem 0; }
+.proof-item { display: flex; flex-direction: column; gap: .15rem; min-width: 8.5rem; }
+.proof-figure { font-family: Montserrat, sans-serif; font-weight: 700; font-size: 1.05rem; color: var(--sand); letter-spacing: .01em; }
+.proof-label { font-size: .82rem; color: rgb(255 255 255 / 72%); }
+@media (max-width: 640px) {
+  .proof-bar-inner { gap: .9rem 1.5rem; }
+  .proof-item { min-width: 45%; }
+}
+
+/* collapsible full trade list, keeps the words without the endless scroll */
+.service-list-details { border: 1px solid rgb(24 50 74 / 14%); background: var(--white); margin-bottom: 2rem; }
+.service-list-details > summary { cursor: pointer; list-style: none; padding: .95rem 1.25rem; font-family: Montserrat, sans-serif;
+  font-weight: 700; font-size: .95rem; color: var(--navy); display: flex; align-items: center; justify-content: space-between; }
+.service-list-details > summary::-webkit-details-marker { display: none; }
+.service-list-details > summary::after { content: "+"; font-size: 1.4rem; line-height: 1; color: var(--bronze); }
+.service-list-details[open] > summary::after { content: "\2013"; }
+.service-list-details > summary:hover { background: var(--ivory); }
+.service-list-details .service-list-grid { padding: 0 1.25rem 1.25rem; }
+
+/* financing band */
+.financing-band { background: var(--sand); color: var(--charcoal); }
+.financing-inner { display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem 3rem; padding: 2.75rem 0; }
+.financing-inner > div { flex: 1 1 26rem; }
+.financing-inner h2 { margin: .2rem 0 .75rem; color: var(--navy-dark); }
+.financing-inner p { margin: 0 0 .7rem; max-width: 46rem; }
+.financing-inner .section-kicker { color: var(--bronze); }
+
+/* every-trade nav in the footer */
+.footer-inner nav.footer-services { display: block; grid-column: 1 / -1; order: -1; margin: 0 0 .5rem; padding-bottom: 1.25rem; border-bottom: 1px solid rgb(255 255 255 / 12%); }
+.footer-services-title { font-family: Montserrat, sans-serif; font-weight: 700; font-size: .78rem; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--sand); margin: 0 0 .5rem; }
+.footer-services-links { display: flex; flex-wrap: wrap; gap: .35rem 1.1rem; }
+.footer-services-links a { color: rgb(255 255 255 / 82%); font-size: .9rem; text-decoration: none; border-bottom: 1px solid transparent; }
+.footer-services-links a:hover, .footer-services-links a:focus-visible { color: var(--white); border-bottom-color: var(--bronze); }
+.footer-services-links a[aria-current="page"] { color: var(--sand); border-bottom-color: var(--sand); }
+
+/* plain list used on the sports courts page */
+.plain-list { margin: .5rem 0 1.25rem; padding-left: 1.1rem; }
+.plain-list li { margin: .3rem 0; }

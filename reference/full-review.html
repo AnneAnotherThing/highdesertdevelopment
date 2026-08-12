@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>High Desert Development · Website and Local Search Review</title>
+<style>
+  :root{
+    --green:#17431e; --forest:#2f6036; --dark:#0a2f14;
+    --gold:#e6b43c; --bone:#f7f5ef; --ink:#23272a; --muted:#5f6b60; --line:#dfe4da;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bone);color:var(--ink);
+    font:16px/1.62 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+  .wrap{max-width:880px;margin:0 auto;padding:0 22px 80px}
+  header{background:var(--dark);color:#f2efe6;padding:44px 22px 38px;text-align:center;
+    border-bottom:4px solid var(--gold)}
+  header .kicker{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);
+    font-weight:700;margin:0 0 14px}
+  header h1{margin:0 0 6px;font-size:clamp(28px,5vw,42px);line-height:1.15;letter-spacing:-.5px}
+  header h2{margin:0;font-size:clamp(15px,2.4vw,20px);font-weight:400;color:#c9d6c6}
+  header .meta{margin:22px auto 0;padding-top:16px;border-top:1px solid rgba(230,180,60,.35);
+    max-width:520px;font-size:13px;color:#b9c7b6}
+  header .meta b{color:#f2efe6}
+  h3{font-size:22px;color:var(--green);margin:48px 0 4px;padding-bottom:8px;
+    border-bottom:2px solid var(--gold)}
+  h4{font-size:15.5px;color:var(--forest);margin:28px 0 2px}
+  p{margin:12px 0}
+  .lede{font-size:17px;color:#333}
+  ul{margin:12px 0;padding-left:20px} li{margin:8px 0}
+  ol{margin:12px 0;padding-left:24px} ol li{margin:9px 0}
+  .card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:20px 22px;margin:18px 0;
+    box-shadow:0 1px 2px rgba(20,40,20,.04)}
+  table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14.5px;background:#fff;
+    border:1px solid var(--line);border-radius:10px;overflow:hidden}
+  th{background:#edf1ea;color:var(--green);text-align:left;font-size:12.5px;letter-spacing:.05em;
+    text-transform:uppercase;padding:11px 13px;border-bottom:1px solid var(--line)}
+  td{padding:11px 13px;border-bottom:1px solid #eef1ec;vertical-align:top}
+  tr:last-child td{border-bottom:none}
+  td.lbl{font-weight:600;color:var(--green)}
+  .why{border-left:4px solid var(--gold);background:#fffdf5;padding:11px 16px;margin:12px 0 24px;
+    border-radius:0 8px 8px 0;font-size:15px;color:#3a3f3b}
+  .why p{margin:0} .why p+p{margin-top:7px}
+  .why b{color:var(--forest)}
+  footer{margin-top:52px;padding-top:20px;border-top:2px solid var(--gold);font-size:13px;color:var(--muted)}
+  footer b{color:var(--green);font-size:14px}
+  code{background:#eef1ec;padding:1px 5px;border-radius:4px;font-size:13px}
+  @media print{body{background:#fff} header{padding:24px} .card{box-shadow:none}}
+</style>
+</head>
+<body>
+<header>
+  <p class="kicker">Hive-Rise App and Web Development</p>
+  <h1>High Desert Development</h1>
+  <h2>Website and Local Search Review</h2>
+  <p class="meta">Prepared for <b>Jerry Heller</b> &nbsp;·&nbsp; Reviewed <b>August 10, 2026</b></p>
+</header>
+
+<div class="wrap">
+
+<h3>1. Summary</h3>
+<p class="lede">This is a review of the new High Desert Development website, currently sitting in a GitHub repository and not yet on the live domain. Everything below was checked directly against the files and the live pages on August 10, 2026.</p>
+<p>The new build is a large step up and the work behind it is sound. Correctly sized responsive images, loaded only when needed. A written page title and description on every page. Structured data for search engines on the home page. An inquiry form that asks the right questions. None of what follows is a criticism of that build.</p>
+<p>One thing up front, because it frames everything else. A site that is built well and a site that is wired in are two different things. Built well means the pages load, the layout holds up and the photographs look right, and this one is built well. Wired in means the number dials when somebody taps it, every page can be reached, the business turns up on the map, and the details agree everywhere they appear. Nearly everything in this report sits in that second half. It is the cheaper half, and it is the half that decides whether a website produces phone calls or just sits there looking finished.</p>
+<p>Nothing here has cost the company anything yet, because the site is not live. That is the good news. Every item below is cheaper to fix now than it will be once the domain switches over.</p>
+<p>The findings are grouped by what they will cost the company, rather than in the order they were found.</p>
+<ul>
+  <li><b>Section 2</b> is what will cost phone calls, from people who have already landed on the site.</li>
+  <li><b>Section 3</b> is what will keep people from finding it at all, plus two things already working against the business online today.</li>
+  <li><b>Section 4</b> is how the business reads to ChatGPT and the AI answers now sitting above search results.</li>
+  <li><b>Section 5</b> is the smaller housekeeping, worth doing while the files are open.</li>
+</ul>
+<p><b>Section 6</b> is a different question, and the more interesting one. It is not about the website. It is about where the next jobs come from, and there is an opening in this specific market that almost nobody is serving.</p>
+
+<h3>2. What Will Cost Calls Once It Goes Live</h3>
+<p>Everything in this section affects somebody who has already landed on the site. These are the cheapest fixes in the report, and all of them are easier to do before the domain switches over than after.</p>
+
+<h4>No phone number on the site can be tapped</h4>
+<p>All nine pages were searched for clickable contact links. The only one anywhere on the site is a <code>mailto</code> on the email address. Every phone number is plain text, so on a phone there is nothing to press.</p>
+<div class="why"><p><b>Why this matters.</b> A number a customer cannot press is a call that does not happen.</p><p><b>The fix.</b> Wrap every number in a tel: link so one tap dials it.</p></div>
+
+<h4>Seven of the nine pages show only the developer's number</h4>
+<p>The business number 760-382-2658 appears on the home page and the contact page. The other seven carry one phone number, 442-417-3036, in the footer credit for the web developer. Somebody who lands on the underground utilities page from a search sees that number and no way to reach High Desert Development.</p>
+<div class="why"><p><b>Why this matters.</b> The page most likely to be found by the right customer is the page with the wrong number on it.</p><p><b>The fix.</b> Put the business number in the header of all nine pages, so it appears everywhere the developer credit does.</p></div>
+
+<h4>The license number is not published</h4>
+<p>California requires a licensed contractor to include the license number in advertising, and a website counts as advertising. The rule is Business and Professions Code section 7030.5. The site states "licensed, bonded, and insured" on all nine pages. The number is on none of them.</p>
+<div class="why"><p><b>Why this matters.</b> California asks for it in advertising, and a homeowner comparing three bids reads a published number as a business with nothing to hide.</p><p><b>The fix.</b> Add the license number to the footer template once and it appears on all nine pages.</p></div>
+
+<h4>Inquiries route through a free relay into a Yahoo inbox</h4>
+<p>The form sends through a service called FormSubmit to highdesertdevelopment@yahoo.com. The first message will not arrive at all until someone opens an activation email from FormSubmit and clicks the link. The domain is already owned, so an address like jerry@highdesertdevelopment.com costs almost nothing.</p>
+<div class="why"><p><b>Why this matters.</b> An enquiry lost to a spam folder looks exactly the same as no enquiry at all.</p><p><b>The fix.</b> Set up an address on the domain, point the form at it, and send one test message to confirm it lands.</p></div>
+
+<h3>3. What Will Keep People From Finding It</h3>
+
+<h4>No Google Business Profile could be found</h4>
+<p>Searches for the business name alongside California City did not surface a Google listing. One may exist unclaimed and simply not be surfacing, which cannot be determined from outside. Either way this is the largest single item in this report. It is free, and it moves faster than anything done to a website.</p>
+<div class="why"><p><b>Why this matters.</b> The map is where somebody hunting a contractor in Kern County actually looks, and you are not in it.</p><p><b>The fix.</b> Search Google Maps first in case an unclaimed listing already exists. Claim it if so, create it if not, then set it up as a service area business, which hides the address and shows the counties instead, and fill in the category, hours and photographs.</p></div>
+
+<h4>Four phone numbers and three addresses across the web</h4>
+<p>Google decides a business is real by finding the same name, city and phone number, in the same form, in several places. Here is what somebody looking you up finds right now.</p>
+<table>
+  <tr><th>Source</th><th>Phone</th><th>Address</th></tr>
+  <tr><td class="lbl">New website</td><td>760-382-2658</td><td>Not published</td></tr>
+  <tr><td class="lbl">BuildZoom</td><td>(760) 514-7062</td><td>10447 S Loop Blvd, California City, CA 93505</td></tr>
+  <tr><td class="lbl">Manta</td><td>(760) 373-3301</td><td>10447 North Loop Boulevard, California City, CA 93505</td></tr>
+  <tr><td class="lbl">eHardHat</td><td>760-284-2755</td><td>7901 Moss Ave, California City, CA 93505</td></tr>
+</table>
+<div class="why"><p><b>Why this matters.</b> Google will not put a business on the map when it cannot work out where the business is.</p><p><b>The fix.</b> Decide the one number and the one city, then update BuildZoom, Manta, eHardHat and Facebook to match. If a listing carries a stale street address, correcting or removing it is fine; a contractor who travels to the job is what Google calls a service area business and does not need one published.</p></div>
+
+<h4>The service pages are galleries, not pages</h4>
+<p>Each of the six follows the same shape: a heading ending in "Portfolio", one line of introduction, then a run of captioned photographs.</p>
+<table>
+  <tr><th>Page</th><th>Words</th><th>Heading</th></tr>
+  <tr><td class="lbl">new-construction-residential</td><td>213</td><td>New Construction Residential Portfolio</td></tr>
+  <tr><td class="lbl">concrete-work</td><td>192</td><td>Concrete Work Portfolio</td></tr>
+  <tr><td class="lbl">underground-utilities</td><td>188</td><td>Underground Utilities Portfolio</td></tr>
+  <tr><td class="lbl">remodeling</td><td>187</td><td>Remodeling Portfolio</td></tr>
+  <tr><td class="lbl">commercial-construction</td><td>148</td><td>Commercial Construction Portfolio</td></tr>
+  <tr><td class="lbl">custom-adu</td><td>147</td><td>Custom ADU Portfolio</td></tr>
+</table>
+<p>The word "Portfolio" is the tell. It describes what the page is to the business, not what the visitor was searching for. Nobody types "underground utilities portfolio". They type "sewer line installation California City", or "septic system installer Kern County", or "who can trench my water line".</p>
+<div class="why"><p><b>Why this matters.</b> Nobody searches for a portfolio. They search for the job, and there is nothing on the page matching what they typed.</p><p><b>The fix.</b> Retitle each page for the job rather than the portfolio, and put the answers a customer actually searches for above the photographs.</p></div>
+
+<h4>The six service pages are reachable only from the home page</h4>
+<p>The service pages link to the home page, the about page and the contact page. They do not link to each other, and nothing else on the site links to them. Somebody reading the underground utilities page has no way to reach concrete work or ADUs without going back to the start. There is also no <code>sitemap.xml</code> and no <code>robots.txt</code>.</p>
+<div class="why"><p><b>Why this matters.</b> A visitor who lands on one service page cannot get to the other five, and a customer who came for a sewer line often turns out to need concrete too.</p><p><b>The fix.</b> Add a services list to the footer of every page, and link each service page to the other five.</p></div>
+
+<h3>4. How the Business Reads to AI Search</h3>
+<p>A growing share of people looking for a contractor now ask a question instead of typing a search. "Who does underground utilities near California City." "I need a septic system put in out in Kern County, who should I call." ChatGPT, Google's AI answers, Perplexity and the assistant built into a phone all handle those the same way: they read what is published about a business, then give one answer rather than a list of ten links. Four things work against that here.</p>
+
+<h4>Another company has the same name</h4>
+<p>High Desert Development Inc. of St. George, Utah, at hddi.org, is a concrete contractor founded in 1997. High Desert Development of California City is a concrete contractor founded in 1999. Two companies, same name, both in the desert Southwest, two years apart, both doing concrete. The Utah company states its city in its own name and publishes one consistent phone number. Nothing on this site says California City at all.</p>
+<div class="why"><p><b>Why this matters.</b> Somebody who asks ChatGPT about High Desert Development gets one answer, not two, and right now the Utah company is the easier one to land on.</p><p><b>The fix.</b> Put California City, California in the footer of every page and in the structured data. A contractor who drives to the job does not need to publish a street address, but the city has to be somewhere.</p></div>
+
+<h4>The most repeated phone number on the site is not yours</h4>
+<p>ChatGPT and Google both weigh how often something is repeated. Across the nine pages the developer's number appears on all nine and the business number appears on two.</p>
+<div class="why"><p><b>Why this matters.</b> If somebody asks their phone for your number, the one it reads back is the one printed most often, and that is currently the developer's.</p><p><b>The fix.</b> The same header change as above. Once the business number is on all nine pages it outnumbers the credit line.</p></div>
+
+<h4>The structured data stops at the front door</h4>
+<p>The home page carries a <code>GeneralContractor</code> block, which is the right instinct and more than most contractor sites have. Three things hold it back. It is only on the home page. It states no city or hours, so when somebody asks for a contractor near them there is nothing on the page to match against. And its <code>sameAs</code> list, which is what lets Google and ChatGPT connect a website to the same business's other profiles, currently lists the website's own address and one YouTube video, while the Facebook page linked in the footer of all nine pages is not in it.</p>
+<div class="why"><p><b>Why this matters.</b> Linking the site to the Facebook page in a way Google and ChatGPT can follow is how two half-pictures of one business become a single one.</p><p><b>The fix.</b> Add the city, the state and the hours to the home page block, put the Facebook URL into sameAs, and take the site's own URL out of it.</p></div>
+
+<h4>There is nothing on the service pages to quote</h4>
+<p>ChatGPT and Google's AI answers work by lifting a sentence or two off a page and crediting the source. A page of captioned photographs gives them nothing to lift. An <code>llms.txt</code> would help here too: a plain text file at the root of the site stating in one place who the business is, what it does, where it works and what its license number is.</p>
+<div class="why"><p><b>Why this matters.</b> If there is no sentence to lift from your page, it gets lifted from a competitor's.</p><p><b>The fix.</b> Write two or three plain sentences on each service page answering the question that page is for, and add an llms.txt at the root of the site.</p></div>
+
+<h3>5. Housekeeping</h3>
+<p>None of this will win or lose a job on its own. All of it is worth doing while the files are already open.</p>
+<ul>
+  <li>No analytics of any kind is installed, so there is no way to tell whether any of the work above produces a single phone call.</li>
+  <li>The six service pages carry no canonical tag and no social sharing tags, so a page texted to a colleague arrives as a bare blue link with no photograph.</li>
+  <li>The footer button labelled "Visit Our Old Website" points at highdesertdevelopment.com, which is the address this site is being uploaded to. It will link to itself the moment it goes live. That spot is better used for the Facebook page.</li>
+  <li>The images folder is 17 MB. One file is 2.0 MB despite being named "optimized", and roughly a dozen sit between 300 and 500 KB. Job sites have bad signal and heavy pages are where those visits are lost.</li>
+  <li>There is no favicon, the small icon on the browser tab.</li>
+  <li>A live clock in the footer rewrites itself once every second on every page, which drains a visitor's battery for as long as the page is open.</li>
+  <li>The inquiry form saves a visitor's name, email, phone and message into their own browser storage and leaves it there.</li>
+</ul>
+
+<h3>6. Where the Next Customers Come From</h3>
+<p>Everything above is about fixing what is already built. This is a different question, and for a business trying to grow into underground utility work it is the more valuable one.</p>
+
+<h4>There is a question in this market that nobody local is answering</h4>
+<p>California City is the third largest city in California by land area, and most of it is a grid of streets and subdivided lots that were sold decades ago and never built on. Thousands of those parcels have owners. More change hands every year.</p>
+<p>Every one of those owners eventually asks the same question: what will it cost to get water, power and a septic system out to my lot, and can I even build on it. The same question comes up across the Antelope Valley and the rest of the high desert.</p>
+<div class="card">
+  <p style="margin-top:0">That question is currently answered online by national cost guide sites that have never seen the Mojave and quote averages from everywhere at once. Nobody local is answering it.</p>
+  <p style="margin-bottom:0">A page that answers it properly for these counties, with real local numbers, the actual permit steps, who to call at the county, and what a parcel needs before anything can be built, would rank for it and would bring in exactly the customer you want: somebody with raw land who needs everything trenched.</p>
+</div>
+<div class="why"><p><b>Why this matters.</b> It reaches people at the moment they decide to build, which is before they have called anybody.</p><p><b>The fix.</b> Write one page answering it for Kern, Los Angeles and Inyo counties, with real local numbers and the permit steps, and link it from the home page.</p></div>
+
+<h4>For utility work, the repeat customer is a builder, not a homeowner</h4>
+<p>Underground utilities is a sub trade. The people who hand out that work over and over are general contractors, homebuilders, ADU builders and land developers. They do not search the way a homeowner searches and they do not care about the same things. They want to know which counties you pull permits in, whether you are bonded, how fast you can mobilise, whether you own your own equipment, and whether you show up.</p>
+<p>The site currently talks to homeowners. One page written for builders, listing the equipment, the counties and the trades kept in house, gives you something to hand a general contractor at the moment you meet one. It doubles as your introduction email.</p>
+<div class="why"><p><b>Why this matters.</b> One builder who keeps calling is worth more than twenty homeowners who call once.</p><p><b>The fix.</b> Add a builders page listing the equipment, the counties, the bonding and the trades kept in house, and use it as the leave-behind.</p></div>
+
+<h4>Public bid work, if you are not already in it</h4>
+<p>This one cannot be seen from outside, so ignore it if you are already there. Kern County runs a purchasing office that posts current bid opportunities publicly, with vendor registration handled through its own page, and the cities in the area post their own. If a contractor is not registered, that whole category of work is invisible, because it never appears in a Google search at all.</p>
+<div class="why"><p><b>Why this matters.</b> Searching harder will never surface this work, because it is not published where a search engine looks.</p><p><b>The fix.</b> Start with the Kern County purchasing page, register as a vendor there, and check whether the cities you work in run their own list.</p></div>
+
+<h4>The water truck is a business of its own</h4>
+<p>A 2000 gallon water truck is a rentable asset with demand that has nothing to do with your crew's time. Every site in the Mojave that disturbs dirt needs water for dust control, and the air district rules here are strict about it. Renting it out puts you on the phone with the exact general contractors you want to sub for.</p>
+<div class="why"><p><b>Why this matters.</b> It earns while the crew is on another job, and it introduces you to the builders you want as customers.</p><p><b>The fix.</b> Give the water truck its own page with the tank size and the service radius, and mention it to every general contractor you meet.</p></div>
+
+<h4>Land agents know who bought the parcel before you do</h4>
+<p>Realtors, land agents and title people know who just bought a lot, often months before that buyer thinks about a contractor. A short, genuinely useful handout for agents, explaining what utilities cost out here and what to check before buying, makes you the name they pass along. It costs an afternoon and it does not expire.</p>
+<div class="why"><p><b>Why this matters.</b> The agent is talking to your future customer months before that customer knows they need a contractor.</p><p><b>The fix.</b> Write a one-page handout on what utilities cost out here, and give it to the land agents and title people already working the area.</p></div>
+
+<h4>Reviews are the cheapest item on this list</h4>
+<p>Public records show 34 building permits and 26 years of customers behind the business, against four reviews online. Once a Google profile exists, asking past customers for a review costs nothing.</p>
+<div class="why"><p><b>Why this matters.</b> When two contractors appear on the map, the one with reviews gets the call.</p><p><b>The fix.</b> Once the Google listing is live, text the last twenty customers a direct review link.</p></div>
+
+<h3>7. Recommended Sequence</h3>
+<p>In order, highest return first.</p>
+<ol>
+  <li>Make every phone number tappable, and put the business number in the header on all nine pages.</li>
+  <li>Publish the license number in the footer of every page.</li>
+  <li>Find or create the Google Business Profile, claim it, and fill it in: category, service area, hours, photographs, description.</li>
+  <li>Choose one phone number and one city, then correct BuildZoom, Manta, eHardHat and Facebook so they all match the website.</li>
+  <li>Start asking past customers for Google reviews.</li>
+  <li>Write the cost-to-get-utilities-to-your-lot page. This is the growth item, and it is the one worth doing properly.</li>
+  <li>Rewrite <code>underground-utilities.html</code> as a real service page, with the photographs kept as proof underneath.</li>
+  <li>Add a builders page, and link the six service pages to each other.</li>
+  <li>If you are not already registered for public bid work, start with the Kern County purchasing page.</li>
+  <li>Fix the <code>sameAs</code> list in the structured data, add the city, state and hours, and add <code>Service</code> data to the service pages.</li>
+  <li>Add canonical and social tags to the six service pages, plus a <code>sitemap.xml</code>, a <code>robots.txt</code> and an <code>llms.txt</code>.</li>
+  <li>Move the inquiry form to an address on the business domain, install analytics, and compress the images.</li>
+</ol>
+
+<div class="card">
+  <h4 style="margin-top:0">Who can do what</h4>
+  <p>Some of this needs nobody but you. The Google Business Profile is free and is done from a phone. The directory corrections are phone calls and web forms. Asking past customers for reviews is a text message. Vendor registration is a form. That is items 3, 4, 5 and 9, and between them they are the fastest-moving things in this report.</p>
+  <p>Then there is a set of small, definite edits to the site files, which whoever holds them can make quickly: the tap-to-call links, the license number, the <code>sameAs</code> fix, the tags, the sitemap, analytics and the images.</p>
+  <p>The longer work is items 6, 7 and 8, the writing. That is where the difference gets made, and it is the part most contractor sites never get to.</p>
+  <p style="margin-bottom:0">On timing. The Google listing, the reviews and the directory corrections usually show movement within a few weeks, because map results respond quickly. The writing is slower and compounds over months, and the utilities cost page is the one that keeps paying.</p>
+</div>
+
+<footer>
+  <p>Checked live on August 10, 2026 against all nine pages of the new build in its GitHub repository, and against public records on BuildZoom, Manta, eHardHat, Bizapedia and Facebook. Anything that could not be confirmed from outside is marked as such above.</p>
+  <p><b>Anne · Hive-Rise · hive-rise.com</b></p>
+</footer>
+
+</div>
+</body>
+</html>
