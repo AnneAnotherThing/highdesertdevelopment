@@ -74,9 +74,10 @@ gold hairline `#C4A65A`, fill `#EDF1EA`.
 
 ## Conventions in the codebase
 
-- Phone links: `<a href="tel:+17603843415" class="tel-link">760-384-3415</a>`.
-  Jerry's number is **760-384-3415**. The 442 number that used to appear in the footer was
-  Raymond's own text line and has been removed.
+- Phone links: `<a class="tel-link" href="tel:+17603822658">760-382-2658</a>`.
+  Jerry's number is **760-382-2658** and it is the only number anywhere in `site/`
+  (21 display instances, 11 `tel:` hrefs, all matching). The 442 number that used to appear
+  in the footer was Raymond's own text line and has been removed.
 - All Hive-Rise CSS additions are appended at the bottom of `styles/main.css` under a
   `/* ---- Hive-Rise additions ---- */` banner. Keep new rules there so they stay separable
   from Raymond's stylesheet.
