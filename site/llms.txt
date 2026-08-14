@@ -23,7 +23,8 @@ Los Angeles and San Bernardino counties. This includes Lancaster, Palmdale,
 Rosamond, Mojave, Tehachapi, California City, Boron, Edwards AFB, Ridgecrest,
 Inyokern, Bakersfield, Lake Isabella, Acton, Littlerock, Pearblossom, Quartz
 Hill, Lake Los Angeles, Sun Village, Agua Dulce, Leona Valley, Santa Clarita,
-Adelanto, Victorville, Apple Valley, Hesperia, Barstow and Wrightwood.
+Altadena, Adelanto, Victorville, Apple Valley, Hesperia, Barstow and
+Wrightwood.
 
 ## Services
 
