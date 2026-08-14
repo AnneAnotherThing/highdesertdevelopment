@@ -95,10 +95,14 @@ const heroCaption = document.querySelector('[data-hero-caption]');
 
 if (heroFrames.length > 1 && heroCaption) {
   const stillFirst = window.matchMedia('(prefers-reduced-motion: reduce)');
+  /* The dissolve itself stays long, it is the part worth watching. What is
+     short is the waiting: the opening hold before the sequence starts, and
+     the rest between stages. HOLD_STAGE must stay above FADE or the next
+     photograph starts arriving before the last one has finished. */
   const FADE = 2600;
-  const HOLD_OPEN = 3000;
-  const HOLD_STAGE = 4400;
-  const CAPTION_REST = 3000;
+  const HOLD_OPEN = 1100;
+  const HOLD_STAGE = 3300;
+  const CAPTION_REST = 2400;
   const order = [1, 2, 0];
   const hero = document.querySelector('.hero');
 
@@ -197,7 +201,7 @@ if (heroFrames.length > 1 && heroCaption) {
   const openingReady = opening.complete
     ? Promise.resolve()
     : readyOrTimeout(opening.decode(), 2000);
-  openingReady.then(() => window.setTimeout(loadStages, 600));
+  openingReady.then(() => window.setTimeout(loadStages, 250));
 }
 
 if (projectForm) {
