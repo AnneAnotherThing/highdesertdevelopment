@@ -48,6 +48,29 @@ Each one unblocks something specific that is currently written around.
    is soft. The grading and scrim hide most of it. If Jerry can find the original camera file
    of that twilight shot, regenerate the derivatives at 2400px.
 
+## Fire rebuild work, and the one boundary Jerry set
+
+Jerry is open to rebuild work after the January 2025 fires, with one exclusion he
+stated himself: **the Pacific Palisades area is off limits. Altadena is fine.**
+
+Nothing has been built for this yet. Neither Altadena nor Palisades appears anywhere
+on the site, so there is nothing to remove, only something to add if he wants it.
+Two things would make him findable there, in order of value:
+
+1. **Add Altadena to the service area** (homepage town list, `contact.html` aside,
+   `llms.txt`, and the homepage `areaServed` schema). It sits inside the stated
+   hundred-mile radius, but that radius is one of the unconfirmed items above, so
+   confirm it in the same pass.
+2. **A rebuild page**, written the way `cost-to-build-on-a-lot.html` is written:
+   answering what people actually search after a total loss, such as how rebuilding
+   works when the lot already had a house, what the insurance process expects from a
+   contractor, permits and debris clearance, and how to check a contractor's licence
+   on the CSLB site before signing. Useful, not solicitation.
+
+Do not write outreach into the fire areas. California restricts contractor
+solicitation in declared disaster zones, and beyond the law it would undercut
+everything the rest of the site says about how he works. Be findable, not present.
+
 ## Still to do, off the site
 
 Worth more than the code work, and none of it needs a developer.
