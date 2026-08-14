@@ -1,0 +1,178 @@
+SUBJECT (if starting fresh): Your new site is almost ready, here is the walkthrough
+BEST SENT AS: a reply inside a thread Jerry started, which keeps it out of
+the spam folder far more reliably than anything else.
+
+ONE BLANK TO FILL: https://highdesertdevelopment.anneanotherthing.workers.dev/, the Cloudflare preview address.
+Not highdesertdevelopment.com, which still serves his old site.
+
+Lines are wrapped at 72 characters so they hold their shape on a phone.
+=============================================================================
+
+
+Hey Jerry,
+
+Your site is just about ready. Twelve pages now, built around your badge,
+and the photographs are your own jobs rather than stock pictures of somebody
+else's houses.
+
+Have a look before you read the rest of this:
+
+https://highdesertdevelopment.anneanotherthing.workers.dev/
+
+That is a preview address while I get everything ready. Your own address,
+highdesertdevelopment.com, still shows the old site until launch day, and
+then it switches over to this one.
+
+
+WHAT IS IN IT
+
+1. It looks like a company that builds custom homes. Deep desert navy, warm
+   sand and bronze, carried the same way across all twelve pages, with your
+   badge in the header and the footer of every one of them.
+
+2. The homepage shows a build, not just a finished house. It opens on one of
+   your finished homes at dusk, moves back through the foundation and the
+   framing of that same job, and returns to the finished house. Anyone
+   landing there watches the thing you actually do before reading a word
+   about it.
+
+3. Calling you is one tap from anywhere. Your number sits in the header of
+   every page, and on a phone it dials rather than making somebody copy it
+   down. Each service page now finishes by inviting the reader to call about
+   that particular trade.
+
+4. Your work does the talking. Galleries on every service page, and the two
+   realtor walkthroughs now sit in a proper feature of their own where
+   somebody can expand either one and go full screen.
+
+5. Answers to what people actually ask you. A questions page covering
+   financing, permits, timelines and who is really on the job. And a page on
+   what it takes to build on a vacant lot, which is the question every owner
+   of a bare parcel out there eventually asks.
+
+6. The quiet work underneath. Your business details, trades and service area
+   written into every page in the format Google reads. The photographs
+   compressed so pages open quickly on a phone out in the desert. And a
+   proper preview card when somebody shares a link.
+
+
+NOW TAKE A RED PEN TO IT
+
+I want to be straight with you about how this got written. To build twelve
+pages I had to make a lot of calls on your behalf: how far you travel, how
+you describe your trades, how the financing gets explained, what your hours
+are. Some came off your old site, some from public records, and a good deal
+of it is my best reading of how you work. It is all written to sound like
+you, which means anywhere I have it wrong, it will sound convincingly wrong.
+
+So please go through it like an inspector. Anywhere something is not right,
+or not how you actually do it, mark it. Then send the whole lot back in one
+reply and I will make every change before it goes live. Nothing on there is
+precious and nothing is settled. You are the only person who knows which
+parts are true.
+
+Here are the ones I already know I guessed at, so start with these:
+
+- Your hours. I have you as Monday to Friday, seven to five, in the details
+  Google reads. If that is wrong, Google will be telling people you are shut
+  when you are not.
+
+- How far you travel. The site says roughly a hundred miles, and the whole
+  list of towns was worked out from that one number.
+
+- Deep wells. They are listed as something you do. If that is not you, say
+  so and I will pull it.
+
+- Every trade in house. The site says the same crew that digs your utilities
+  pours the foundation and frames the walls. That is the strongest claim on
+  there, so it needs to be exactly right.
+
+- Permits and financing. The site says permits are part of the job, and it
+  walks people through how construction loans work. Both commit you to
+  something, so tell me if either goes further than you want.
+
+- Thirty years, or since 1999. Both are on there. I read it as you having
+  been in the trade longer than the company has been going, but tell me the
+  right way to put it.
+
+
+THE SHORT LIST I NEED FROM YOU
+
+- A few commercial job photos. That gallery has one real photograph and one
+  of your flyers standing in beside it. You have hundreds of pictures, and
+  any three or four good ones will fill it properly.
+
+These next ones are optional, no rush, and the site launches fine without
+any of them:
+
+- Naming your financing partner, if you think it is worth it. Right now the
+  page explains how construction loans work in general and tells people to
+  ask you about it. It could name who yours runs through instead. Do you
+  think that is a good add, or would you rather keep it general?
+
+- A line or two from past customers. There is no social proof on the site at
+  all yet, and a few honest sentences from people you have built for would
+  carry real weight.
+
+- Whether you are a veteran yourself. You offer the veterans discount, and
+  if you are one there are California certifications that carry weight on
+  public bid work. I left it off rather than assume.
+
+
+WHAT I AM HANDLING
+
+The hosting, pointing highdesertdevelopment.com at it, and the final speed
+and safety checks. Once it is live I will send a test through the contact
+form so you can see an enquiry land in your inbox, and the form service will
+email you once to confirm the address before it starts delivering.
+
+GoDaddy has a way of quietly stacking extras onto an account, so while I was
+in there I went through your billing line by line. Sure enough, two things
+were renewing on their own.
+
+The first is a Websites and Marketing package at $359.88 a year. That is the
+builder your old site was made with, and it is usually the one people are
+nervous about cancelling, because it sounds like the thing holding the
+website up. It is not, not any more. Your new site is not built on GoDaddy
+at all. It runs on Cloudflare, which is where I keep the sites I build, and
+I am glad to leave it there, so there is nothing on that GoDaddy package
+your website needs. I have stopped it renewing, and that is $359.88 a year
+you get back.
+
+One thing to be careful of while you are in there: your domain name,
+highdesertdevelopment.com, is a separate item and it stays. That is the
+address itself, and it is worth keeping. It is only the site builder and the
+extras that are going.
+
+The second is a phone and messaging add-on at $12.99 a month, which is
+another $155.88 a year. I have deliberately left that one alone until I hear
+back from you, because it is the sort of add-on that can carry a business
+number. So before I touch it: is 760-382-2658 a number GoDaddy gave you, or
+your own line that they were simply passing calls through? Yours is on every
+page of the new site, in the business details Google reads, on your sign and
+printed on your logo, and I was not about to switch something off and find
+out the hard way. If it is your own line I will stop that one as well and it
+saves you another $155.88 a year. If it came from GoDaddy I will leave it
+exactly where it is and sort out moving the number properly first.
+
+Once your changes come back, the site goes live.
+
+
+If anything here sparks a question, just reply, I am one message away. And
+if you want to walk through it together on a call anyway, I am always happy
+to.
+
+There is a lot of work behind what these pages are showing, and it was a
+pleasure building something that finally looks like it. I always look
+forward to hearing from you.
+
+Warmly,
+Anne
+Hive-Rise
+480-440-2314
+hive-rise.com
+
+P.S. I keep an eye on the sites I build after they go live, the technical
+side of it, so nothing quietly breaks and the details Google reads stay
+right. Entirely optional and nothing to decide on now. The site is yours
+either way.
