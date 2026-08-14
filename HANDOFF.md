@@ -27,9 +27,12 @@ Each one unblocks something specific that is currently written around.
 
 ## Still to do, on the site
 
-1. **Get it live.** Upload `site/` to GoDaddy cPanel on `highdesertdevelopment.com`.
-   `site/README-GODADDY-UPLOAD.txt` has the steps. Jerry is not going to do this himself,
-   which is why a finished site has sat offline. Highest-value action in the engagement.
+1. **Get it live.** This moved to **Cloudflare deployed from GitHub**, not the GoDaddy
+   cPanel upload Raymond described. The source is pushed to
+   `AnneAnotherThing/highdesertdevelopment` on `main`, and `site/wrangler.jsonc` is in
+   place, so a build should now clone and deploy. What is left is pointing
+   `highdesertdevelopment.com` at Cloudflare and confirming the deploy serves the site.
+   Still the highest-value action in the engagement.
 2. **Test the contact form with Jerry, after launch.** The form posts to FormSubmit at
    his Yahoo address, and FormSubmit delivers nothing until the address is activated by
    clicking a link in an email it sends on the first submission. Raymond built this and

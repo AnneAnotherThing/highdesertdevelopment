@@ -23,8 +23,17 @@ Read this first. Everything below is established fact from prior work, not guess
 ## The site
 
 Static HTML/CSS/JS. No framework, no build step, no package.json. **12 pages.**
-Destination is GoDaddy cPanel hosting on `highdesertdevelopment.com`.
-`site/README-GODADDY-UPLOAD.txt` is Raymond's upload guide and is still accurate.
+
+**Hosting is Cloudflare, deployed from GitHub, not GoDaddy cPanel.** The Cloudflare
+project `highdesertdevelopment` builds from `AnneAnotherThing/highdesertdevelopment`,
+branch `main`, root directory `/site`, deploy command `npx wrangler deploy`. The config it
+needs is `site/wrangler.jsonc`, an assets-only Worker with no script. Pushing to `main` is
+what deploys. `site/README-GODADDY-UPLOAD.txt` is Raymond's original cPanel guide and is
+kept only for the record.
+
+**`site/images/` is tracked in git.** It used to be ignored to keep the handoff package
+small. The repo is the deploy source now, so anything left out of git is missing from the
+live site.
 
 Run it with `cd site && python3 -m http.server 8000`. That is the whole toolchain.
 
