@@ -707,27 +707,98 @@ p:last-child { margin-bottom: 0; }
   display: grid; grid-template-columns: 1.2fr 1fr; gap: 3rem;
   padding-block: 4rem; align-items: start;
 }
-.contact-card { border: 1px solid var(--line); border-top: 3px solid var(--bronze); padding: 1.5rem; background: #fff; }
+.contact-card {
+  border: 1px solid var(--line); border-top: 3px solid var(--bronze);
+  padding: 1.6rem 1.75rem; background: #fff; margin-bottom: 1.25rem;
+  box-shadow: 0 10px 26px rgb(8 24 37 / 7%);
+  transition: box-shadow 0.18s ease, transform 0.18s ease;
+}
+.contact-card:hover { box-shadow: 0 16px 34px rgb(8 24 37 / 12%); transform: translateY(-2px); }
+.contact-card h2 {
+  margin: 0 0 0.5rem;
+  font: 700 0.72rem var(--head); letter-spacing: 0.11em; text-transform: uppercase;
+  color: var(--bronze);
+}
+.contact-card > p:first-of-type { margin: 0 0 0.35rem; font-size: 1.15rem; font-weight: 700; }
+.contact-card > p:first-of-type a { color: var(--navy); }
+.contact-card > p:last-child { margin: 0; color: var(--muted); font-size: 0.92rem; }
 .contact-details { list-style: none; margin: 0; padding: 0; }
 .contact-details li { margin-bottom: 0.85rem; }
 
-.project-form { display: block; }
-.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-.form-field { display: flex; flex-direction: column; gap: 0.35rem; margin-bottom: 1rem; }
-.form-field label { font: 600 0.85rem var(--head); color: var(--navy); }
+/* The enquiry form is the one place on the site a visitor is asked to do
+   work, so it is built as a card rather than fields loose on the page:
+   bronze rule across the top, and inputs that sit in the card as wells. */
+.project-form {
+  display: block;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--bronze);
+  padding: 2rem 2rem 2.25rem;
+  box-shadow: 0 18px 40px rgb(8 24 37 / 10%);
+}
+.project-form h2 {
+  margin: 0 0 0.4rem;
+  font-size: clamp(1.3rem, 2.2vw, 1.7rem);
+}
+.project-form > .required-note:first-of-type {
+  margin: 0 0 1.75rem; padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 1.25rem; }
+.form-field { display: flex; flex-direction: column; gap: 0.45rem; margin-bottom: 1.15rem; }
+.form-field label {
+  font: 700 0.72rem var(--head); letter-spacing: 0.11em; text-transform: uppercase;
+  color: var(--navy);
+}
+
 .form-field input, .form-field select, .form-field textarea {
-  border: 1px solid var(--line); padding: 0.75rem 0.85rem; font: inherit; font-size: 0.95rem;
-  background: #fff; color: var(--body); border-radius: 0;
+  border: 1px solid var(--line); border-bottom-width: 2px;
+  padding: 0.85rem 0.95rem; font: inherit; font-size: 0.98rem;
+  background: var(--sand-soft); color: var(--body); border-radius: 0;
+  box-shadow: inset 0 1px 3px rgb(8 24 37 / 7%);
+  transition: background 0.16s ease, border-color 0.16s ease, box-shadow 0.16s ease;
+}
+.form-field textarea { min-height: 8.5rem; resize: vertical; }
+.form-field input::placeholder, .form-field textarea::placeholder { color: rgb(97 102 107 / 65%); }
+
+.form-field input:hover, .form-field select:hover, .form-field textarea:hover {
+  border-color: rgb(24 50 74 / 26%);
 }
 .form-field input:focus, .form-field select:focus, .form-field textarea:focus {
-  outline: 2px solid var(--bronze); outline-offset: 0; border-color: var(--bronze);
+  outline: none;
+  background: #fff;
+  border-color: var(--bronze); border-bottom-color: var(--bronze);
+  box-shadow: inset 0 1px 3px rgb(8 24 37 / 5%), 0 0 0 3px rgb(155 96 37 / 18%);
 }
+
+/* The native select arrow is the one control that cannot be styled, and it
+   drags the whole card back down to looking like a default form. */
+.form-field select {
+  appearance: none; -webkit-appearance: none;
+  padding-right: 2.5rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.75L6 6.25L11 1.75' stroke='%2318324a' stroke-width='1.7' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+}
+
+.project-form .button { width: 100%; margin-top: 0.5rem; }
+
 .form-trap { position: absolute; left: -9999px; }
 .required-note, .form-message { font-size: 0.88rem; color: var(--muted); }
+.required-note em, .req { color: var(--bronze); font-style: normal; }
+.form-message:not(:empty) {
+  margin-top: 1rem; padding: 0.85rem 1rem;
+  background: var(--sand-soft); border-left: 3px solid var(--bronze);
+  color: var(--navy); font-weight: 600;
+}
 
 .service-map { padding-bottom: 4rem; }
 .service-map-heading { margin-bottom: 1rem; }
-.service-map-frame { border: 1px solid var(--line); }
+.service-map-frame {
+  border: 1px solid var(--line); border-top: 3px solid var(--bronze);
+  box-shadow: 0 10px 26px rgb(8 24 37 / 7%);
+}
 /* The embed ships with height="600", which is taller than the whole form
    beside it. Size it from the column instead. */
 .service-map-frame iframe {
@@ -863,6 +934,8 @@ p:last-child { margin-bottom: 0; }
   .video-band { padding: 1.5rem 1.25rem 1.75rem; }
   .project-videos { grid-template-columns: 1fr; }
   .form-grid { grid-template-columns: 1fr; }
+  .project-form { padding: 1.5rem 1.25rem 1.75rem; }
+  .contact-card { padding: 1.35rem 1.4rem; }
   .footer-inner { grid-template-columns: 1fr; }
   .intro, .two-column { padding-block: 3rem; }
   .services-section, .featured-work { padding-block: 3.25rem; }
