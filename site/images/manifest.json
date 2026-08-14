@@ -1,0 +1,976 @@
+[
+  {
+    "source": "custom_backyard.png",
+    "original_size": [
+      370,
+      800
+    ],
+    "cropped_size": [
+      370,
+      279
+    ],
+    "variants": [
+      {
+        "width": 370,
+        "height": 279,
+        "file": "custom_backyard-370w.webp",
+        "bytes": 19778
+      }
+    ]
+  },
+  {
+    "source": "custom_bath.jpg",
+    "original_size": [
+      960,
+      1280
+    ],
+    "cropped_size": [
+      960,
+      1280
+    ],
+    "variants": [
+      {
+        "width": 480,
+        "height": 640,
+        "file": "custom_bath-480w.webp",
+        "bytes": 29068
+      },
+      {
+        "width": 768,
+        "height": 1024,
+        "file": "custom_bath-768w.webp",
+        "bytes": 56254
+      }
+    ]
+  },
+  {
+    "source": "custom_back_patio.jpg",
+    "original_size": [
+      640,
+      480
+    ],
+    "cropped_size": [
+      640,
+      480
+    ],
+    "variants": [
+      {
+        "width": 480,
+        "height": 360,
+        "file": "custom_back_patio-480w.webp",
+        "bytes": 25764
+      }
+    ]
+  },
+  {
+    "source": "custom_concrete_stamping.png",
+    "original_size": [
+      296,
+      640
+    ],
+    "cropped_size": [
+      296,
+      396
+    ],
+    "variants": [
+      {
+        "width": 296,
+        "height": 396,
+        "file": "custom_concrete_stamping-296w.webp",
+        "bytes": 24508
+      }
+    ]
+  },
+  {
+    "source": "custom_patio_walkway.png",
+    "original_size": [
+      296,
+      640
+    ],
+    "cropped_size": [
+      296,
+      395
+    ],
+    "variants": [
+      {
+        "width": 296,
+        "height": 395,
+        "file": "custom_patio_walkway-296w.webp",
+        "bytes": 31876
+      }
+    ]
+  },
+  {
+    "source": "custom_residential.jpg",
+    "original_size": [
+      800,
+      600
+    ],
+    "cropped_size": [
+      800,
+      600
+    ],
+    "variants": [
+      {
+        "width": 480,
+        "height": 360,
+        "file": "custom_residential-480w.webp",
+        "bytes": 17806
+      },
+      {
+        "width": 768,
+        "height": 576,
+        "file": "custom_residential-768w.webp",
+        "bytes": 35318
+      }
+    ]
+  },
+  {
+    "source": "custom_shower.jpg",
+    "original_size": [
+      960,
+      1280
+    ],
+    "cropped_size": [
+      960,
+      1280
+    ],
+    "variants": [
+      {
+        "width": 480,
+        "height": 640,
+        "file": "custom_shower-480w.webp",
+        "bytes": 13966
+      },
+      {
+        "width": 768,
+        "height": 1024,
+        "file": "custom_shower-768w.webp",
+        "bytes": 27696
+      }
+    ]
+  },
+  {
+    "source": "custom_walkway_arches.jpg",
+    "original_size": [
+      480,
+      640
+    ],
+    "cropped_size": [
+      480,
+      640
+    ],
+    "variants": [
+      {
+        "width": 480,
+        "height": 640,
+        "file": "custom_walkway_arches-480w.webp",
+        "bytes": 73618
+      }
+    ]
+  },
+  {
+    "source": "dream_home_add_value_custom_adu.png",
+    "original_size": [
+      1320,
+      903
+    ],
+    "cropped_size": [
+      1320,
+      903
+    ],
+    "variants": [
+      {
+        "width": 480,
+        "height": 328,
+        "file": "dream_home_add_value_custom_adu-480w.webp",
+        "bytes": 35972
+      },
+      {
+        "width": 768,
+        "height": 525,
+        "file": "dream_home_add_value_custom_adu-768w.webp",
+        "bytes": 75354
+      },
+      {
+        "width": 1200,
+        "height": 821,
+        "file": "dream_home_add_value_custom_adu-1200w.webp",
+        "bytes": 140068
+      }
+    ]
+  },
+  {
+    "source": "every_trade.png",
+    "original_size": [
+      207,
+      320
+    ],
+    "cropped_size": [
+      207,
+      320
+    ],
+    "variants": [
+      {
+        "width": 207,
+        "height": 320,
+        "file": "every_trade-207w.webp",
+        "bytes": 17208
+      }
+    ]
+  },
+  {
+    "source": "fireplace_makeover.jpg",
+    "original_size": [
+      1320,
+      1949
+    ],
+    "cropped_size": [
+      1320,
+      1949
+    ],
+    "variants": [
+      {
+        "width": 480,
+        "height": 709,
+        "file": "fireplace_makeover-480w.webp",
+        "bytes": 71292
+      },
+      {
+        "width": 768,
+        "height": 1134,
+        "file": "fireplace_makeover-768w.webp",
+        "bytes": 140076
+      },
+      {
+        "width": 1200,
+        "height": 1772,
+        "file": "fireplace_makeover-1200w.webp",
+        "bytes": 232892
+      }
+    ]
+  },
+  {
+    "source": "heavy_equipment_drill_rig.jpg",
+    "original_size": [
+      1280,
+      960
+    ],
+    "cropped_size": [
+      1280,
+      960
+    ],
+    "variants": [
+      {
+        "width": 480,
+        "height": 360,
+        "file": "heavy_equipment_drill_rig-480w.webp",
+        "bytes": 32946
+      },
+      {
+        "width": 768,
+        "height": 576,
+        "file": "heavy_equipment_drill_rig-768w.webp",
+        "bytes": 78108
+      },
+      {
+        "width": 1200,
+        "height": 900,
+        "file": "heavy_equipment_drill_rig-1200w.webp",
+        "bytes": 173166
+      }
+    ]
+  },
+  {
+    "source": "home_extensions_realtor_contact.png",
+    "original_size": [
+      736,
+      1600
+    ],
+    "cropped_size": [
+      700,
+      966
+    ],
+    "variants": [
+      {
+        "width": 480,
+        "height": 662,
+        "file": "home_extensions_realtor_contact-480w.webp",
+        "bytes": 40660
+      }
+    ]
+  },
+  {
+    "source": "new_home_construction.png",
+    "original_size": [
+      182,
+      240
+    ],
+    "cropped_size": [
+      182,
+      240
+    ],
+    "variants": [
+      {
+        "width": 182,
+        "height": 240,
+        "file": "new_home_construction-182w.webp",
+        "bytes": 9972
+      }
+    ]
+  },
+  {
+    "source": "pickle_court.png",
+    "original_size": [
+      193,
+      240
+    ],
+    "cropped_size": [
+      193,
+      240
+    ],
+    "variants": [
+      {
+        "width": 193,
+        "height": 240,
+        "file": "pickle_court-193w.webp",
+        "bytes": 10270
+      }
+    ]
+  },
+  {
+    "source": "septic_code.jpg",
+    "original_size": [
+      1536,
+      2048
+    ],
+    "cropped_size": [
+      1536,
+      2048
+    ],
+    "variants": [
+      {
+        "width": 480,
+        "height": 640,
+        "file": "septic_code-480w.webp",
+        "bytes": 38996
+      },
+      {
+        "width": 768,
+        "height": 1024,
+        "file": "septic_code-768w.webp",
+        "bytes": 76468
+      },
+      {
+        "width": 1200,
+        "height": 1600,
+        "file": "septic_code-1200w.webp",
+        "bytes": 140028
+      }
+    ]
+  },
+  {
+    "source": "septic_installation.jpg",
+    "original_size": [
+      1536,
+      2048
+    ],
+    "cropped_size": [
+      1536,
+      2048
+    ],
+    "variants": [
+      {
+        "width": 480,
+        "height": 640,
+        "file": "septic_installation-480w.webp",
+        "bytes": 69630
+      },
+      {
+        "width": 768,
+        "height": 1024,
+        "file": "septic_installation-768w.webp",
+        "bytes": 171374
+      },
+      {
+        "width": 1200,
+        "height": 1600,
+        "file": "septic_installation-1200w.webp",
+        "bytes": 404462
+      }
+    ]
+  },
+  {
+    "source": "septic_job.jpg",
+    "original_size": [
+      1536,
+      2048
+    ],
+    "cropped_size": [
+      1536,
+      2048
+    ],
+    "variants": [
+      {
+        "width": 480,
+        "height": 640,
+        "file": "septic_job-480w.webp",
+        "bytes": 57526
+      },
+      {
+        "width": 768,
+        "height": 1024,
+        "file": "septic_job-768w.webp",
+        "bytes": 140404
+      },
+      {
+        "width": 1200,
+        "height": 1600,
+        "file": "septic_job-1200w.webp",
+        "bytes": 314682
+      }
+    ]
+  },
+  {
+    "source": "septic_tank.jpg",
+    "original_size": [
+      1536,
+      2048
+    ],
+    "cropped_size": [
+      1536,
+      2048
+    ],
+    "variants": [
+      {
+        "width": 480,
+        "height": 640,
+        "file": "septic_tank-480w.webp",
+        "bytes": 71530
+      },
+      {
+        "width": 768,
+        "height": 1024,
+        "file": "septic_tank-768w.webp",
+        "bytes": 179422
+      },
+      {
+        "width": 1200,
+        "height": 1600,
+        "file": "septic_tank-1200w.webp",
+        "bytes": 414792
+      }
+    ]
+  },
+  {
+    "source": "septic_plumbing.jpg",
+    "original_size": [
+      1536,
+      2048
+    ],
+    "cropped_size": [
+      1536,
+      2048
+    ],
+    "variants": [
+      {
+        "width": 480,
+        "height": 640,
+        "file": "septic_plumbing-480w.webp",
+        "bytes": 78488
+      },
+      {
+        "width": 768,
+        "height": 1024,
+        "file": "septic_plumbing-768w.webp",
+        "bytes": 192942
+      },
+      {
+        "width": 1200,
+        "height": 1600,
+        "file": "septic_plumbing-1200w.webp",
+        "bytes": 447892
+      }
+    ]
+  },
+  {
+    "source": "septic_ventilation.jpg",
+    "original_size": [
+      1536,
+      2048
+    ],
+    "cropped_size": [
+      1536,
+      2048
+    ],
+    "variants": [
+      {
+        "width": 480,
+        "height": 640,
+        "file": "septic_ventilation-480w.webp",
+        "bytes": 77352
+      },
+      {
+        "width": 768,
+        "height": 1024,
+        "file": "septic_ventilation-768w.webp",
+        "bytes": 189064
+      },
+      {
+        "width": 1200,
+        "height": 1600,
+        "file": "septic_ventilation-1200w.webp",
+        "bytes": 430512
+      }
+    ]
+  },
+  {
+    "source": "sewage_plumbing.jpg",
+    "original_size": [
+      956,
+      2047
+    ],
+    "cropped_size": [
+      956,
+      2047
+    ],
+    "variants": [
+      {
+        "width": 480,
+        "height": 1028,
+        "file": "sewage_plumbing-480w.webp",
+        "bytes": 105536
+      },
+      {
+        "width": 768,
+        "height": 1644,
+        "file": "sewage_plumbing-768w.webp",
+        "bytes": 257598
+      }
+    ]
+  },
+  {
+    "source": "sewer_installation.jpg",
+    "original_size": [
+      1200,
+      1600
+    ],
+    "cropped_size": [
+      1200,
+      1600
+    ],
+    "variants": [
+      {
+        "width": 480,
+        "height": 640,
+        "file": "sewer_installation-480w.webp",
+        "bytes": 84450
+      },
+      {
+        "width": 768,
+        "height": 1024,
+        "file": "sewer_installation-768w.webp",
+        "bytes": 209404
+      },
+      {
+        "width": 1200,
+        "height": 1600,
+        "file": "sewer_installation-1200w.webp",
+        "bytes": 493684
+      }
+    ]
+  },
+  {
+    "source": "modern_residential.png",
+    "original_size": [
+      1284,
+      2778
+    ],
+    "cropped_size": [
+      1284,
+      728
+    ],
+    "variants": [
+      {
+        "width": 480,
+        "height": 272,
+        "file": "modern_residential-480w.webp",
+        "bytes": 16278
+      },
+      {
+        "width": 768,
+        "height": 435,
+        "file": "modern_residential-768w.webp",
+        "bytes": 38516
+      },
+      {
+        "width": 1200,
+        "height": 680,
+        "file": "modern_residential-1200w.webp",
+        "bytes": 95628
+      }
+    ]
+  },
+  {
+    "source": "sewage_trenching.jpg",
+    "original_size": [
+      1200,
+      1600
+    ],
+    "cropped_size": [
+      1200,
+      1600
+    ],
+    "variants": [
+      {
+        "width": 480,
+        "height": 640,
+        "file": "sewage_trenching-480w.webp",
+        "bytes": 87518
+      },
+      {
+        "width": 768,
+        "height": 1024,
+        "file": "sewage_trenching-768w.webp",
+        "bytes": 218880
+      },
+      {
+        "width": 1200,
+        "height": 1600,
+        "file": "sewage_trenching-1200w.webp",
+        "bytes": 511390
+      }
+    ]
+  },
+  {
+    "source": "sewer_line_tap.jpg",
+    "original_size": [
+      1536,
+      2048
+    ],
+    "cropped_size": [
+      1536,
+      2048
+    ],
+    "variants": [
+      {
+        "width": 480,
+        "height": 640,
+        "file": "sewer_line_tap-480w.webp",
+        "bytes": 58786
+      },
+      {
+        "width": 768,
+        "height": 1024,
+        "file": "sewer_line_tap-768w.webp",
+        "bytes": 156350
+      },
+      {
+        "width": 1200,
+        "height": 1600,
+        "file": "sewer_line_tap-1200w.webp",
+        "bytes": 377590
+      }
+    ]
+  },
+  {
+    "source": "underground_utilities.jpg",
+    "original_size": [
+      560,
+      800
+    ],
+    "cropped_size": [
+      560,
+      800
+    ],
+    "variants": [
+      {
+        "width": 480,
+        "height": 686,
+        "file": "underground_utilities-480w.webp",
+        "bytes": 65880
+      }
+    ]
+  },
+  {
+    "source": "block_walls.png",
+    "original_size": [
+      210,
+      320
+    ],
+    "cropped_size": [
+      210,
+      320
+    ],
+    "variants": [
+      {
+        "width": 210,
+        "height": 320,
+        "file": "block_walls-210w.webp",
+        "bytes": 17318
+      }
+    ]
+  },
+  {
+    "source": "company_sign.jpg",
+    "original_size": [
+      640,
+      480
+    ],
+    "cropped_size": [
+      640,
+      480
+    ],
+    "variants": [
+      {
+        "width": 480,
+        "height": 360,
+        "file": "company_sign-480w.webp",
+        "bytes": 25080
+      }
+    ]
+  },
+  {
+    "source": "custom_adu.jpg",
+    "original_size": [
+      1320,
+      1093
+    ],
+    "cropped_size": [
+      1320,
+      1093
+    ],
+    "variants": [
+      {
+        "width": 480,
+        "height": 397,
+        "file": "custom_adu-480w.webp",
+        "bytes": 35674
+      },
+      {
+        "width": 768,
+        "height": 636,
+        "file": "custom_adu-768w.webp",
+        "bytes": 71486
+      },
+      {
+        "width": 1200,
+        "height": 994,
+        "file": "custom_adu-1200w.webp",
+        "bytes": 130526
+      }
+    ]
+  },
+  {
+    "source": "concrete_walkway.png",
+    "original_size": [
+      296,
+      640
+    ],
+    "cropped_size": [
+      296,
+      395
+    ],
+    "variants": [
+      {
+        "width": 296,
+        "height": 395,
+        "file": "concrete_walkway-296w.webp",
+        "bytes": 32374
+      }
+    ]
+  },
+  {
+    "source": "commercial_build.png",
+    "original_size": [
+      736,
+      1600
+    ],
+    "cropped_size": [
+      736,
+      477
+    ],
+    "variants": [
+      {
+        "width": 480,
+        "height": 311,
+        "file": "commercial_build-480w.webp",
+        "bytes": 13318
+      }
+    ]
+  },
+  {
+    "source": "concrete_layout.jpg",
+    "original_size": [
+      2048,
+      1536
+    ],
+    "cropped_size": [
+      2048,
+      1536
+    ],
+    "variants": [
+      {
+        "width": 480,
+        "height": 360,
+        "file": "concrete_layout-480w.webp",
+        "bytes": 35848
+      },
+      {
+        "width": 768,
+        "height": 576,
+        "file": "concrete_layout-768w.webp",
+        "bytes": 90076
+      },
+      {
+        "width": 1200,
+        "height": 900,
+        "file": "concrete_layout-1200w.webp",
+        "bytes": 219620
+      },
+      {
+        "width": 1600,
+        "height": 1200,
+        "file": "concrete_layout-1600w.webp",
+        "bytes": 385268
+      }
+    ]
+  },
+  {
+    "source": "concrete_work.png",
+    "original_size": [
+      203,
+      240
+    ],
+    "cropped_size": [
+      203,
+      240
+    ],
+    "variants": [
+      {
+        "width": 203,
+        "height": 240,
+        "file": "concrete_work-203w.webp",
+        "bytes": 12594
+      }
+    ]
+  },
+  {
+    "source": "new_residential_home.png",
+    "original_size": [
+      1284,
+      2778
+    ],
+    "cropped_size": [
+      1166,
+      1166
+    ],
+    "variants": [
+      {
+        "width": 480,
+        "height": 480,
+        "file": "new_residential_home-480w.webp",
+        "bytes": 29488
+      },
+      {
+        "width": 768,
+        "height": 768,
+        "file": "new_residential_home-768w.webp",
+        "bytes": 67216
+      }
+    ]
+  },
+  {
+    "source": "rural_residential.png",
+    "original_size": [
+      1284,
+      2778
+    ],
+    "cropped_size": [
+      1284,
+      969
+    ],
+    "variants": [
+      {
+        "width": 480,
+        "height": 362,
+        "file": "rural_residential-480w.webp",
+        "bytes": 28112
+      },
+      {
+        "width": 768,
+        "height": 580,
+        "file": "rural_residential-768w.webp",
+        "bytes": 60612
+      },
+      {
+        "width": 1200,
+        "height": 906,
+        "file": "rural_residential-1200w.webp",
+        "bytes": 108588
+      }
+    ]
+  },
+  {
+    "source": "single_story_residential.png",
+    "original_size": [
+      1284,
+      2778
+    ],
+    "cropped_size": [
+      1284,
+      964
+    ],
+    "variants": [
+      {
+        "width": 480,
+        "height": 360,
+        "file": "single_story_residential-480w.webp",
+        "bytes": 11004
+      },
+      {
+        "width": 768,
+        "height": 577,
+        "file": "single_story_residential-768w.webp",
+        "bytes": 24118
+      },
+      {
+        "width": 1200,
+        "height": 901,
+        "file": "single_story_residential-1200w.webp",
+        "bytes": 47926
+      }
+    ]
+  },
+  {
+    "source": "single_residential.png",
+    "original_size": [
+      1284,
+      2778
+    ],
+    "cropped_size": [
+      1284,
+      966
+    ],
+    "variants": [
+      {
+        "width": 480,
+        "height": 361,
+        "file": "single_residential-480w.webp",
+        "bytes": 29248
+      },
+      {
+        "width": 768,
+        "height": 578,
+        "file": "single_residential-768w.webp",
+        "bytes": 75026
+      },
+      {
+        "width": 1200,
+        "height": 903,
+        "file": "single_residential-1200w.webp",
+        "bytes": 185816
+      }
+    ]
+  }
+]

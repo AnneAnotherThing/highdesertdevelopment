@@ -9,6 +9,11 @@ Read this first. Everything below is established fact from prior work, not guess
   commercial, sports courts, deep wells. Several trades in house. In business since 1999.
   License #771814. Offers a 10% veterans discount and construction financing.
   Works roughly a **100 mile radius** from California City.
+  Also a **certified home inspector**. The certificate is from a Penn Foster online course
+  (about six weeks, per Anne 2026-08-13). Public wording is "certified home inspector" and
+  nothing more: do not name the school anywhere Jerry's customers can see, do not call it a
+  license (California has no home inspector license), and do not imply InterNACHI or CREIA
+  membership. It is used on the site as proof of how he checks his own work, not as a service.
 - **Raymond**, the developer who built the original site (Apex Code Works). Built it well.
   He is not the enemy. He handed the growth work to Anne. His credit line has been removed
   from the footer at Anne's instruction; do not put it back.
@@ -115,8 +120,38 @@ stylesheet, `site/styles/main.css`. Tokens are CSS custom properties at the top 
 ```
 
 Montserrat 600/700/800 for headings and UI, Open Sans for body. Square corners everywhere,
-no border radius, no drop shadows except the one on the hero CTA. Sections are `padding-block`
-based, never margin based.
+no border radius. Sections are `padding-block` based, never margin based.
+
+Buttons carry depth on purpose: a shallow vertical gradient over the base colour, a one pixel
+inset top highlight, and a shadow that deepens and lifts the button a pixel on hover. Anne
+asked for a richer look than the flat originals. Keep the square corners. If you override
+`.button-primary`'s background anywhere, layer the gradient over the new colour rather than
+replacing the background outright, or that button goes flat while the rest do not
+(`.financing-band` does this correctly).
+
+The badge logo sits directly on the ink header and footer with no plate behind it, at a size
+where the bronze ring and white lettering carry it (`.brand-logo` 88px, `.footer-badge`
+170px, `.intro-badge` 280px). Anne's call, and the reason the sizes matter: the badge has a
+black core that sits close to the ink, so below roughly 80px it stops reading and starts
+looking like a smudge. If it ever has to appear smaller than that on a dark ground, give it
+a light plate rather than shrinking it further.
+
+The hero runs a one-shot build sequence. It opens on the finished twilight plate, holds a
+beat, cross-fades back through `hero_phase_foundation` and `hero_phase_framing`, and returns
+to the twilight plate and stops. It never loops. A small sand caption names each stage and
+fades out once the hero comes to rest. The point is that the site claims Jerry runs a job
+from the first trench to the last walkthrough, and this shows it rather than saying it.
+Rules that keep it honest and fast:
+
+- **Real jobs only.** The two stage photos are Jerry's own, the same desert site, graded
+  toward the twilight palette. `excavator.jpg` and `loader_site_grading.jpg` are stock, from
+  somewhere green, and must not go in this sequence.
+- The stage frames carry `data-src`, not `src`. `scripts/main.js` swaps them in only after
+  the opening plate has decoded, so they never compete with the LCP image. With JavaScript
+  off, the hero is simply the twilight plate.
+- Do not gate the sequence on `window.load`. The page carries two Vimeo iframes and that
+  event lands seconds late.
+- `prefers-reduced-motion: reduce` stops the stage frames from ever loading or running.
 
 The hero deserves a note because it took the most work. `.hero-media` is a graded webp
 derivative built from `custom_home_twilight_exterior.jpg` (crop, slight saturation and
@@ -147,6 +182,13 @@ diagonal scrim is dropped and the photo is panned right so the house still reads
 - `llms.txt` at the root is the plain-language summary answer engines read. If services,
   counties, the phone number or the financing wording change, update it in the same commit.
 - `sitemap.xml` lists all 12 pages. Adding a page means adding it there and to both navs.
+- `styles/main.css` and `scripts/main.js` are referenced with a version query, currently
+  `?v=20260813d`, on all 12 pages. **Bump it in the same commit as any change to either
+  file.** Without it a returning visitor keeps the copy GoDaddy already handed them, which is
+  exactly how a fixed stylesheet or script can look broken after it has been corrected.
+- The hero sequence waits for `document.visibilityState === 'visible'` before it runs. A
+  hidden tab freezes CSS transitions at their start while timers keep going, so without the
+  gate a visitor arriving from a background tab would land mid dissolve on a blank hero.
 
 ## Where things live
 

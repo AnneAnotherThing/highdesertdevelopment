@@ -1,0 +1,13 @@
+{
+  // Static site served straight from Cloudflare's edge. There is no Worker
+  // script and no build step: "assets" with no "main" is a valid
+  // assets-only deployment, which is exactly what this site is.
+  //
+  // The Cloudflare project has its root directory set to /site, so wrangler
+  // runs from inside this folder and "./" below is the site itself.
+  "name": "highdesertdevelopment",
+  "compatibility_date": "2026-08-13",
+  "assets": {
+    "directory": "./"
+  }
+}

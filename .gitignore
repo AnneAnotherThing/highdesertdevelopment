@@ -1,3 +1,13 @@
-# Images are tracked in the working tree but were kept out of git history
-# so the repo stays small. See reference/BASELINE-NOTE.md
-site/images/
+# site/images/ used to be excluded to keep the handoff package small. It is
+# tracked now: this repo is what Cloudflare builds from, so anything missing
+# here is missing from the live site.
+
+# Handoff and source archives, not part of the site
+*.zip
+
+# Scratch copies and superseded logo sources
+high-desert-development-homepage-redesign.html
+Gemini_Generated_Image_*.jpeg
+
+# Empty clone of the GitHub repo, created while wiring up the deploy
+highdesertdevelopment/

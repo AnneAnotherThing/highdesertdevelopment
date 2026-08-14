@@ -85,6 +85,121 @@ if (videoDialog && videoDialogPlayer && videoDialogTitle && videoDialogClose) {
   });
 }
 
+/* The hero opens on the finished house, walks back through the two stages that
+   built it, and comes to rest on the finished house again. It runs once, never
+   loops, and never starts at all if the visitor has asked for reduced motion.
+   The stage frames carry no src until the page has loaded, so they cannot
+   compete with the opening plate for bandwidth. */
+const heroFrames = [...document.querySelectorAll('.hero .hero-media')];
+const heroCaption = document.querySelector('[data-hero-caption]');
+
+if (heroFrames.length > 1 && heroCaption) {
+  const stillFirst = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const FADE = 2600;
+  const HOLD_OPEN = 3000;
+  const HOLD_STAGE = 4400;
+  const CAPTION_REST = 3000;
+  const order = [1, 2, 0];
+  const hero = document.querySelector('.hero');
+
+  /* The incoming photograph is lifted above the one already showing and
+     dissolves in over the top of it, while the outgoing frame is left fully
+     opaque underneath. Fading one out while fading the other in would let the
+     background show through the middle of the cross and read as a dip. */
+  const showFrame = (index) => {
+    const incoming = heroFrames[index];
+
+    incoming.classList.remove('is-active');
+    incoming.style.transition = 'none';
+    incoming.style.opacity = '0';
+    /* Only ever 0 or 1. Climbing z-index values would ride up over the
+       overlay and the headline, which both sit above the photographs. */
+    heroFrames.forEach((frame) => { frame.style.zIndex = '0'; });
+    incoming.style.zIndex = '1';
+    void incoming.offsetWidth;
+    incoming.style.transition = '';
+    incoming.style.opacity = '';
+    incoming.classList.add('is-active');
+
+    if (hero) hero.classList.toggle('is-staging', index !== 0);
+
+    heroCaption.textContent = incoming.dataset.caption || '';
+    heroCaption.classList.add('is-visible');
+
+    window.setTimeout(() => {
+      heroFrames.forEach((frame, n) => {
+        if (n !== index) frame.classList.remove('is-active');
+      });
+    }, FADE);
+  };
+
+  const runSequence = () => {
+    let step = 0;
+    const next = () => {
+      showFrame(order[step]);
+      step += 1;
+      if (step < order.length) {
+        window.setTimeout(next, HOLD_STAGE);
+      } else {
+        window.setTimeout(() => heroCaption.classList.remove('is-visible'), CAPTION_REST);
+      }
+    };
+    next();
+  };
+
+  /* Decoding is nice to have, not something to wait on. A browser that is not
+     painting the page, which is any tab opened in the background, can leave
+     decode() pending forever. Racing it against a timer means the sequence
+     always gets to run. */
+  const readyOrTimeout = (promise, ms) => new Promise((resolve) => {
+    let settled = false;
+    const finish = () => {
+      if (settled) return;
+      settled = true;
+      resolve();
+    };
+    promise.then(finish, finish);
+    window.setTimeout(finish, ms);
+  });
+
+  const loadStages = () => {
+    if (stillFirst.matches) return;
+    const pending = heroFrames.filter((frame) => frame.dataset.src);
+    if (!pending.length) return;
+    Promise.all(pending.map((frame) => {
+      frame.srcset = frame.dataset.srcset;
+      frame.src = frame.dataset.src;
+      return readyOrTimeout(frame.decode(), 1500);
+    })).then(startWhenSeen);
+  };
+
+  /* Only walk through the stages while somebody is actually looking. A hidden
+     tab freezes CSS transitions at their start but keeps running timers, so
+     the sequence would otherwise step through its frames unseen and the
+     visitor would arrive to a hero part way through a dissolve. */
+  const startWhenSeen = () => {
+    if (document.visibilityState === 'visible') {
+      window.setTimeout(runSequence, HOLD_OPEN);
+      return;
+    }
+    const onVisible = () => {
+      if (document.visibilityState !== 'visible') return;
+      document.removeEventListener('visibilitychange', onVisible);
+      window.setTimeout(runSequence, HOLD_OPEN);
+    };
+    document.addEventListener('visibilitychange', onVisible);
+  };
+
+  /* Gate on the opening plate finishing, not on window load. The page carries
+     two Vimeo iframes, and waiting for those would hold the sequence back for
+     seconds after the hero is already sitting there ready. */
+  const opening = heroFrames[0];
+  const openingReady = opening.complete
+    ? Promise.resolve()
+    : readyOrTimeout(opening.decode(), 2000);
+  openingReady.then(() => window.setTimeout(loadStages, 600));
+}
+
 if (projectForm) {
   const savedService = JSON.parse(localStorage.getItem('hddLastService'))?.category;
   const serviceSelect = projectForm.querySelector('#service');

@@ -25,8 +25,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/main.css">
-  <script src="scripts/main.js" defer></script>
+  <link rel="stylesheet" href="styles/main.css?v=20260813h">
+  <script src="scripts/main.js?v=20260813h" defer></script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -222,7 +222,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="index.html" aria-label="High Desert Development home">
-        <img class="brand-logo" src="images/high-desert-development-logo.png" width="157" height="140" alt="">
+        <img class="brand-logo" src="images/high-desert-development-logo.png" width="800" height="709" alt="">
         <span class="brand-copy">
           <span>High Desert</span>
           <strong>Development</strong>
@@ -242,25 +242,37 @@
         <a href="about.html">About</a>
         <a href="faq.html">FAQ</a>
         <a href="contact.html">Contact</a>
-        <a class="header-call" href="tel:+17603822658"><span aria-hidden="true">&#9990;</span> <span>760-382-2658</span></a>
+        <a class="header-call" href="tel:+17603822658"><svg class="icon-phone" viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" focusable="false"><path fill="currentColor" d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg> <span>760-382-2658</span></a>
       </nav>
     </div>
   </header>
 
   <main id="main-content">
     <section class="hero" aria-labelledby="hero-title">
-      <img class="hero-media"
+      <img class="hero-media is-active" data-caption="Finished"
            src="images/hero_custom_home_twilight-1400w.webp"
            srcset="images/hero_custom_home_twilight-700w.webp 700w, images/hero_custom_home_twilight-1000w.webp 1000w, images/hero_custom_home_twilight-1400w.webp 1400w"
            sizes="100vw" width="1400" height="728" fetchpriority="high"
            alt="Custom home at twilight on open desert acreage, windows lit, mountains on the horizon">
+      <img class="hero-media" data-caption="Foundation"
+           data-src="images/hero_phase_foundation-1400w.webp"
+           data-srcset="images/hero_phase_foundation-700w.webp 700w, images/hero_phase_foundation-1000w.webp 1000w, images/hero_phase_foundation-1400w.webp 1400w"
+           sizes="100vw" width="1400" height="728" decoding="async"
+           alt="Poured concrete foundation slab on open desert acreage, plumbing stubs standing, mountains on the horizon">
+      <img class="hero-media" data-caption="Framing"
+           data-src="images/hero_phase_framing-1400w.webp"
+           data-srcset="images/hero_phase_framing-700w.webp 700w, images/hero_phase_framing-1000w.webp 1000w, images/hero_phase_framing-1400w.webp 1400w"
+           sizes="100vw" width="1400" height="728" decoding="async"
+           alt="Wood framing standing on the finished slab at the same desert site">
       <div class="hero-overlay"></div>
+      <div class="hero-scrim"></div>
+      <p class="hero-phase" data-hero-caption aria-hidden="true"></p>
       <div class="hero-content">
         <p class="eyebrow">Custom homes on desert acreage since 1999</p>
         <h1 id="hero-title">Antelope Valley and High Desert General Contractor</h1>
         <p class="hero-lede">Custom homes, ADUs, and the underground work that makes a piece of land buildable. Every trade in house, and <strong>Jerry Heller on the job himself</strong>, from the first trench to the last walkthrough. Construction financing available.</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="tel:+17603822658"><span aria-hidden="true">&#9990;</span> Call 760-382-2658</a>
+          <a class="button button-primary" href="tel:+17603822658"><svg class="icon-phone" viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" focusable="false"><path fill="currentColor" d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg> Call 760-382-2658</a>
           <a class="button button-secondary" href="contact.html">Request an estimate</a>
         </div>
       </div>
@@ -271,7 +283,7 @@
   <div class="section-shell proof-bar-inner">
     <div class="proof-item"><span class="proof-figure">Since 1999</span><span class="proof-label">Building in the High Desert</span></div>
     <div class="proof-item"><span class="proof-figure">Lic. #771814</span><span class="proof-label">Licensed, bonded and insured</span></div>
-    <div class="proof-item"><span class="proof-figure">100 miles</span><span class="proof-label">Bakersfield to Victorville</span></div>
+    <div class="proof-item"><span class="proof-figure">Bakersfield to Victorville</span><span class="proof-label">And everywhere between</span></div>
     <div class="proof-item"><span class="proof-figure">Owner on site</span><span class="proof-label">Jerry is on every job</span></div>
     <div class="proof-item"><span class="proof-figure">Financing</span><span class="proof-label">Available on larger projects</span></div>
     <div class="proof-item"><span class="proof-figure">10% off</span><span class="proof-label">Veterans discount</span></div>
@@ -279,13 +291,18 @@
 </section>
 <section class="section-warm">
       <div class="intro section-shell" aria-labelledby="intro-title">
-        <div>
+        <div class="intro-lead">
           <p class="section-kicker">The owner is on your job</p>
           <h2 id="intro-title">One contractor, start to finish</h2>
+          <img class="intro-badge" src="images/high-desert-development-logo.png" width="800" height="709" loading="lazy" alt="High Desert Development badge. General Construction Services, residential and commercial, established 1999, license 771814.">
+          <div class="intro-actions">
+            <p>An estimate costs nothing, and the person who picks up the phone is the one who will be standing on your job.</p>
+            <a class="portfolio-text-link" href="about.html">More about Jerry</a>
+          </div>
         </div>
         <div class="intro-copy">
           <p>Most builds get handed down a chain. A salesman signs you, a manager you never meet schedules it, and a rotating cast of subcontractors does the actual work. That is where the quality goes.</p>
-          <p>High Desert Development runs the other way. <strong>Jerry Heller is on the job himself</strong>, and the trades are in house rather than bid out job to job. The same people who dig your utilities pour your foundation and frame your walls, so nobody is inheriting somebody else's mistakes, and there is one person to ask when you want to know how it is going.</p>
+          <p>High Desert Development runs the other way. <strong>Jerry Heller is on the job himself</strong>, and the trades are in house rather than bid out job to job. The same people who dig your utilities pour your foundation and frame your walls, so nobody is inheriting somebody else's mistakes, and there is one person to ask when you want to know how it is going. Jerry is also a <strong>certified home inspector</strong>, so the eye on your framing is trained to catch what the final inspection will look for.</p>
           <p>More than 30 years of that, across <strong>new residential, commercial and private construction</strong>, <strong>full-service remodeling</strong>, and <strong>underground utilities</strong>. Backyard sports courts too, which is work very few contractors out here take on.</p>
         </div>
       </div>
@@ -431,20 +448,29 @@
         </figure>
       </div>
 
-      <div class="project-videos">
+      <div class="video-band">
+        <div class="video-band-copy">
+          <p class="section-kicker light">Walkthroughs</p>
+          <h3>See the finished work the way a buyer sees it</h3>
+          <p>Photographs flatter. A walkthrough does not. These are two homes High Desert Development built start to finish, filmed by realtors moving room to room the way a buyer would.</p>
+          <p>The owner on every job, every trade in house, every stage checked by an eye trained to catch what an inspector catches. This is what that produces.</p>
+          <p>Pause anywhere. If this is the standard you want on your own lot, call <a class="tel-link" href="tel:+17603822658">760-382-2658</a>.</p>
+        </div>
+        <div class="project-videos">
         <div class="project-video">
-          <h3>Step inside a finished home</h3>
+          <h3>First home</h3>
           <div class="video-frame">
             <iframe title="Realtor walkthrough of a completed High Desert Development custom home" src="https://player.vimeo.com/video/1054297143?h=f2b77e932d&amp;playsinline=1" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" allowfullscreen></iframe>
           </div>
-          <button class="video-expand" type="button" data-video-src="https://player.vimeo.com/video/1054297143?h=f2b77e932d&amp;playsinline=1" data-video-title="Realtor walkthrough of a completed High Desert Development custom home">Expand video</button>
+          <button class="video-expand" type="button" data-video-src="https://player.vimeo.com/video/1054297143?h=f2b77e932d&amp;playsinline=1" data-video-title="Realtor walkthrough of a completed High Desert Development custom home">Expand video <span aria-hidden="true">&#x2922;</span></button>
         </div>
         <div class="project-video">
-          <h3>Tour a second build</h3>
+          <h3>Second home</h3>
           <div class="video-frame">
             <iframe title="Second walkthrough of a completed High Desert Development custom home" src="https://player.vimeo.com/video/1054283727?h=b8faa3816c&amp;playsinline=1" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" allowfullscreen></iframe>
           </div>
-          <button class="video-expand" type="button" data-video-src="https://player.vimeo.com/video/1054283727?h=b8faa3816c&amp;playsinline=1" data-video-title="Second walkthrough of a completed High Desert Development custom home">Expand video</button>
+          <button class="video-expand" type="button" data-video-src="https://player.vimeo.com/video/1054283727?h=b8faa3816c&amp;playsinline=1" data-video-title="Second walkthrough of a completed High Desert Development custom home">Expand video <span aria-hidden="true">&#x2922;</span></button>
+        </div>
         </div>
       </div>
 
@@ -462,9 +488,9 @@
         <div class="section-heading">
           <div>
             <p class="section-kicker">Where we work</p>
-            <h2 id="areas-title">A hundred miles in every direction</h2>
+            <h2 id="areas-title">From Bakersfield to Victorville</h2>
           </div>
-          <p>Kern, Los Angeles and San Bernardino counties. If your lot is inside that circle, it is a drive Jerry makes.</p>
+          <p>Kern, Los Angeles and San Bernardino counties, roughly a hundred miles in every direction from California City. If your lot is in that range, it is a drive Jerry makes.</p>
         </div>
         <ul class="area-list">
           <li>Lancaster</li><li>Palmdale</li><li>Rosamond</li><li>Mojave</li>
@@ -487,7 +513,7 @@
       <p>Construction loans also tend to work differently from how people expect. Rather than coming due when the build is finished, most are written to roll straight into a regular mortgage on the completed house. <a href="faq.html#financing">How construction financing works</a> lays it out in plain language.</p>
       <p>Ask about it when you call and we will walk you through it, with no obligation either way.</p>
     </div>
-    <a class="button button-primary" href="tel:+17603822658"><span aria-hidden="true">&#9990;</span> Ask about financing</a>
+    <a class="button button-primary" href="tel:+17603822658"><svg class="icon-phone" viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" focusable="false"><path fill="currentColor" d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg> Ask about financing</a>
   </div>
 </section>
 <section id="contact" class="contact-band" aria-labelledby="contact-title">
@@ -516,6 +542,7 @@
         </div>
       </nav>
       <div>
+        <img class="footer-badge" src="images/high-desert-development-logo.png" width="800" height="709" loading="lazy" alt="">
         <p class="footer-brand">High Desert Development</p>
         <p class="footer-description">Construction and utility services led by Jerry Heller, who is on every job himself. Serving the Antelope Valley, the High Desert and roughly a hundred miles around, across Kern, Los Angeles and San Bernardino counties. Fully licensed, bonded and insured. California Contractor License #771814. Phone: <a class="tel-link" href="tel:+17603822658">760-382-2658</a>.</p>
         <p class="veteran-discount">Ask us about our 10% off discount for veterans.</p>

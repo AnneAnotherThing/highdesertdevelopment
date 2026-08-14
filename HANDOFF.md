@@ -30,8 +30,17 @@ Each one unblocks something specific that is currently written around.
 1. **Get it live.** Upload `site/` to GoDaddy cPanel on `highdesertdevelopment.com`.
    `site/README-GODADDY-UPLOAD.txt` has the steps. Jerry is not going to do this himself,
    which is why a finished site has sat offline. Highest-value action in the engagement.
-2. **Analytics.** Nothing is measuring traffic. Add a lightweight tag once the domain is live.
-3. **Submit the sitemap** to Google Search Console after the switch.
+2. **Test the contact form with Jerry, after launch.** The form posts to FormSubmit at
+   his Yahoo address, and FormSubmit delivers nothing until the address is activated by
+   clicking a link in an email it sends on the first submission. Raymond built this and
+   nobody knows whether he ever activated it. Do not send a test submission before launch:
+   the redirect lands on the live domain, and the activation email would hit Jerry's inbox
+   with no context. Post launch, send one labelled test, have Jerry look for the FormSubmit
+   activation email (spam folder included), click it, then send a second test to confirm
+   delivery. The client side is verified: validation, honeypot, redirect and the thank-you
+   message all work.
+3. **Analytics.** Nothing is measuring traffic. Add a lightweight tag once the domain is live.
+4. **Submit the sitemap** to Google Search Console after the switch.
 4. **Retina hero.** The hero source is only 1400px wide, so on a 2x display at full width it
    is soft. The grading and scrim hide most of it. If Jerry can find the original camera file
    of that twilight shot, regenerate the derivatives at 2400px.
