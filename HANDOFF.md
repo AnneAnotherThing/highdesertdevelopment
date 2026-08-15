@@ -17,8 +17,15 @@ Each one unblocks something specific that is currently written around.
 3. **A photo of him.** The About page slot still holds a photo of his jobsite sign. The whole
    site now argues that the owner is the one on your job, and the owner has no face on it.
    This is the single highest-value thing he can hand over and it costs nothing.
-4. **Real job photos for commercial construction.** That gallery has one real photo. A flyer
-   graphic was left in deliberately rather than leaving a hole. He has hundreds.
+4. **Real job photos for commercial construction.** That gallery has one real photo, and the
+   every-trade sheet now sits in its own band below rather than padding out the grid. He has
+   hundreds of pictures. Any three or four good ones fill it.
+   While asking: **the print files for six of the seven sheets.** Only the commercial
+   concrete and stamped concrete sheets survive at a size worth reading. The rest came over
+   as thumbnails between 182 and 210px wide, so they are drawn small and cannot be enlarged.
+   Whatever he sent to the printer would let all of them open full size. The stamped concrete
+   sheet also needs a re-export: the file is clipped on the right edge, and its contact strip
+   prints 760-382-3948, which is why the strip is cropped off on the site.
 5. **Testimonials.** A few lines from past customers, if there are any he is comfortable
    asking. There is no social proof on the site at all.
 6. **Is he a veteran himself?** He offers a 10% veterans discount. If he is one, there are
@@ -53,19 +60,29 @@ Each one unblocks something specific that is currently written around.
 Jerry is open to rebuild work after the January 2025 fires, with one exclusion he
 stated himself: **the Pacific Palisades area is off limits. Altadena is fine.**
 
-Nothing has been built for this yet. Neither Altadena nor Palisades appears anywhere
-on the site, so there is nothing to remove, only something to add if he wants it.
-Two things would make him findable there, in order of value:
+Both of the things that would make him findable there are now built.
 
-1. **Add Altadena to the service area** (homepage town list, `contact.html` aside,
-   `llms.txt`, and the homepage `areaServed` schema). It sits inside the stated
-   hundred-mile radius, but that radius is one of the unconfirmed items above, so
-   confirm it in the same pass.
-2. **A rebuild page**, written the way `cost-to-build-on-a-lot.html` is written:
-   answering what people actually search after a total loss, such as how rebuilding
-   works when the lot already had a house, what the insurance process expects from a
-   contractor, permits and debris clearance, and how to check a contractor's licence
-   on the CSLB site before signing. Useful, not solicitation.
+1. **Altadena is in the service area.** Homepage town list, `contact.html` aside,
+   `llms.txt` and the homepage `areaServed` schema. It sits inside the stated
+   hundred-mile radius, and that radius is still one of the unconfirmed items above.
+2. **`rebuilding-after-a-fire.html`**, written the way `cost-to-build-on-a-lot.html`
+   is written. Roughly 1,050 words on the foundation question, site clearance, the
+   faster permit route for rebuilding close to what was there, the wildfire exterior
+   standards, what an adjuster's scope expects, the four contract rules, and how to
+   check a licence at CSLB. Linked from the footer of all 13 pages, from the new
+   construction page in context, and carried in `sitemap.xml` and `llms.txt`.
+   Palisades appears nowhere on the site, which is checked.
+
+**Still open, and it decides how far this page can be pushed:** how far into Los
+Angeles County will Jerry actually drive. The page names Altadena and the foothill
+communities because those he approved. Anything wider waits on his answer.
+
+Two facts on that page will need re-checking over time, because both moved once
+already. The wildfire exterior provisions left Chapter 7A of the building code and
+now sit in the California Wildland-Urban Interface Code, and the page says so
+deliberately, because a homeowner reading an older guide will meet the discrepancy.
+The Los Angeles County rebuild programme is linked rather than described, so that
+its details can change without the page going stale.
 
 Do not write outreach into the fire areas. California restricts contractor
 solicitation in declared disaster zones, and beyond the law it would undercut

@@ -682,6 +682,77 @@ p:last-child { margin-bottom: 0; }
 }
 .portfolio-actions { padding-bottom: 3rem; display: flex; gap: 0.85rem; flex-wrap: wrap; }
 
+/* ---------- service sheets ---------- */
+
+/* The printed flyers used to sit in the photo grids, where a portrait poster
+   landed in a 300px column beside landscape job photographs and got stretched
+   past its own resolution. They are not photographs of work, they are printed
+   sheets, so they get their own band and are held to the width they were
+   actually made at. Four of the seven exist only as small thumbnails, and the
+   210px cap is what keeps those from going soft. */
+.sheet-band {
+  background: var(--sand-soft);
+  border-top: 1px solid var(--line);
+  padding-block: 4rem;
+}
+.sheet-band h2 { margin-bottom: 0.75rem; }
+.sheet-lede { color: var(--muted); max-width: 46rem; margin: 0; }
+
+.sheet-rack {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 210px));
+  justify-content: start; gap: 2.25rem 1.75rem; margin-top: 2.5rem;
+}
+.sheet { margin: 0; }
+
+/* A narrow white mat, so a dark poster reads as a sheet lying on the warm
+   ground rather than a hole cut in it. */
+.sheet-paper {
+  display: block; background: #fff; padding: 7px;
+  border: 1px solid var(--line);
+  box-shadow: 0 10px 24px rgb(13 33 51 / 12%);
+}
+.sheet-paper img { width: 100%; height: auto; }
+a.sheet-paper { transition: transform 0.18s ease, box-shadow 0.18s ease; }
+a.sheet-paper:hover,
+a.sheet-paper:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 34px rgb(13 33 51 / 22%);
+}
+.sheet figcaption {
+  margin-top: 0.9rem;
+  font: 600 0.9rem/1.45 var(--head); color: var(--navy);
+}
+/* Only the sheets that exist at a size worth enlarging carry this. */
+.sheet-open-note {
+  display: block; margin-top: 0.25rem;
+  font: 700 0.72rem var(--head); letter-spacing: 0.09em; text-transform: uppercase;
+  color: var(--bronze);
+}
+
+/* Sized to the sheet rather than to a fixed box. Two of these exist only at
+   480px wide, and a fixed dialog would blow them up past their own detail. */
+.sheet-dialog {
+  border: 0; padding: 0; background: transparent;
+  width: max-content; max-width: min(92vw, 660px);
+}
+.sheet-dialog::backdrop { background: rgb(13 33 51 / 84%); }
+.sheet-dialog-header {
+  display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+  padding: 0.75rem 1rem; background: var(--ink); color: #fff;
+  border-bottom: 3px solid var(--bronze);
+}
+.sheet-dialog-title { margin: 0; font: 700 0.95rem var(--head); color: #fff; }
+.sheet-dialog-close {
+  background: none; border: 1px solid rgb(255 255 255 / 40%); color: #fff;
+  padding: 0.35rem 0.75rem; cursor: pointer;
+  font: 600 0.85rem var(--head); flex: none;
+}
+.sheet-dialog-figure { margin: 0; background: #fff; }
+.sheet-dialog-figure img {
+  max-width: 100%; width: auto; height: auto;
+  max-height: calc(100vh - 7rem); margin: 0 auto;
+}
+
 /* ---------- FAQ ---------- */
 
 .faq-list { max-width: 52rem; padding-bottom: 4rem; }
@@ -833,6 +904,25 @@ p:last-child { margin-bottom: 0; }
   border: 1px solid rgb(216 195 165 / 30%);
 }
 .video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+/* The extension sheet rides with the walkthroughs rather than with the
+   remodeling gallery, because both are realtor pieces. On the ink band the
+   white mat is doing the work the badge plate does elsewhere: without it a
+   dark poster on a dark ground reads as a hole. */
+.video-band-sheet {
+  display: flex; align-items: flex-start; gap: 1.25rem;
+  margin-top: 1.75rem; padding-top: 1.5rem;
+  border-top: 1px solid rgb(216 195 165 / 30%);
+}
+.video-band-sheet .sheet-paper {
+  flex: none; width: 128px; padding: 5px; border-color: transparent;
+  box-shadow: 0 8px 20px rgb(0 0 0 / 35%);
+}
+.video-band-sheet-copy h4 {
+  color: #fff; margin: 0 0 0.4rem; font-size: 1.02rem;
+}
+.video-band-sheet-copy p { margin: 0; max-width: 24rem; }
+.video-band-sheet .sheet-open-note { color: var(--bronze-txt); margin-top: 0.6rem; }
+
 .video-dialog { border: 0; padding: 0; max-width: min(92vw, 1000px); }
 .video-dialog-header { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1rem; background: var(--ink); color: #fff; border-bottom: 3px solid var(--bronze); }
 .video-dialog-close { background: none; border: 1px solid rgb(255 255 255 / 40%); color: #fff; padding: 0.35rem 0.75rem; cursor: pointer; }
@@ -932,6 +1022,9 @@ p:last-child { margin-bottom: 0; }
   .service-card { min-height: 230px; }
   .featured-media { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 120px; }
   .video-band { padding: 1.5rem 1.25rem 1.75rem; }
+  /* Side by side, the sheet leaves the copy about 155px to wrap in, which is
+     a ragged sliver. Stack it. */
+  .video-band-sheet { flex-direction: column; gap: 1rem; }
   .project-videos { grid-template-columns: 1fr; }
   .form-grid { grid-template-columns: 1fr; }
   .project-form { padding: 1.5rem 1.25rem 1.75rem; }
@@ -939,6 +1032,11 @@ p:last-child { margin-bottom: 0; }
   .footer-inner { grid-template-columns: 1fr; }
   .intro, .two-column { padding-block: 3rem; }
   .services-section, .featured-work { padding-block: 3.25rem; }
+  .sheet-band { padding-block: 3rem; }
+  /* auto-fit counts its repetitions off the maximum track size, not the
+     minimum, so 158 rather than 175 is what puts two sheets on a phone
+     instead of one. */
+  .sheet-rack { grid-template-columns: repeat(auto-fit, minmax(130px, 158px)); gap: 1.75rem 1.25rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {

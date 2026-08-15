@@ -119,7 +119,7 @@ validate. All internal links and image paths resolve. Every page returns 200 at 
 | Form data written to browser storage | yes | none |
 | Images folder | 15.9 MB | 12 MB |
 | Images over 300 KB | 16 | 0 |
-| Flyer graphics in photo galleries | 5 | 1 |
+| Flyer graphics in photo galleries | 5 | 0 |
 | `llms.txt` | absent | present |
 | Invalid JSON-LD blocks | n/a | 0 |
 
@@ -128,6 +128,91 @@ New in pass 1: `sports-courts.html` (448 words, own `Service` schema), `llms.txt
 
 Removed in pass 1: the footer clock, the `hddProjectInquiry` localStorage write, and
 Raymond's stray `fix_lowercase_url.py` from the web root (kept in `reference/`).
+
+---
+
+## Pass 3: the printed sheets
+
+Pass 1 pulled the flyers out of the photo galleries because a portrait poster landed in a
+300px column beside landscape job photographs and got stretched past its own resolution.
+Jerry is proud of them, so they are back, in a band of their own rather than mixed in with
+the pictures of work.
+
+| | before | after |
+|---|---|---|
+| Flyers on the site | 1, inside a photo grid | 7, out of the photo grids, on 6 pages |
+| Widest a flyer is ever drawn | 300px+, upscaled | 210px, capped, never past its own resolution |
+| Flyers you can read at full size | 0 | 4, in a dialog |
+| Flyers printing a phone number that is not 760-382-2658 | 1 | 0 |
+
+**Where they sit.** Five service pages carry a "Printed sheets" band below the gallery:
+`underground-utilities` (utilities), `concrete-work` (commercial concrete, stamped concrete,
+block walls), `commercial-construction` (every trade), `new-construction-residential`
+(new homes), `sports-courts` (pickleball courts).
+
+The seventh is the home extension sheet, and it does not sit in a band. It is the Kyle
+Gordon Group's piece, not Jerry's, so it rides in the walkthroughs band on the homepage
+next to the realtor-filmed videos rather than in the remodeling gallery. On the ink ground
+its white mat does the job the plate does for the badge: without it a dark poster on a dark
+band reads as a hole.
+
+**The 3948 problem, closed.** `beautiful_concrete_flyer.jpg` prints 760-382-3948, which is
+why pass 1 held it back. Its contact strip has been cropped off at the band's own edge, at
+y=995, measured rather than guessed. What survives is the headline, both photographs, the
+service list and the six feature icons, and the page around it already carries the right
+number. Reissued as `stamped_concrete_flyer` at 480 and 768 (55 KB / 123 KB). The uncropped
+original stays in `images/` as the source and is referenced by nothing.
+
+`underground_utilities-optimized.png` was a 222 KB PNG and is now
+`underground_utilities_flyer` at 480 and 768 webp (75 KB / 156 KB).
+
+**Four of the seven exist only as thumbnails**, between 182 and 210px wide, with no larger
+original in the handoff zip or the image manifest. Those are drawn at their own size and
+carry no enlarge link, which is why the rack caps at 210px rather than filling the row.
+
+Note on the stamped concrete sheet: the source Jerry supplied is itself clipped on the right
+edge, so the last icon column reads "proudly serving Californ". That is in the original, not
+the crop, and only a new export from Jerry fixes it.
+
+---
+
+## Pass 4: the fire rebuild page
+
+`rebuilding-after-a-fire.html`, the thirteenth page, built the way
+`cost-to-build-on-a-lot.html` is built: an `Article` page that answers the question
+rather than pitching against it. Roughly 1,050 words. Jerry's stated boundary holds,
+Altadena is named and Palisades appears nowhere on the site, which is checked on every
+page rather than assumed.
+
+| | before | after |
+|---|---|---|
+| Pages | 12 | 13 |
+| Pages answering a search rather than listing a service | 1 | 2 |
+| Sitemap entries | 12 | 13 |
+| Footer navigation links | 4 | 5, on all 13 pages |
+
+Sections: whether the foundation survived, which is an engineer's call and not a site
+walk; clearance before design; the faster permit route for rebuilding close to what was
+lost; the wildfire exterior standards; what an adjuster's scope expects an estimate to
+look like; the four contract rules; and checking a licence at CSLB.
+
+**Every legal claim on the page was verified against a primary source**, not a summary.
+The deposit cap of $1,000 or 10 percent whichever is less, and the seven business day
+right to cancel where an emergency was declared, are CSLB's own wording. The reason time
+and materials and cost plus do not work is that a home improvement contract has to state
+a fixed total and a payment schedule in dollars, and rebuilding a home counts as home
+improvement.
+
+One claim was caught mid-move. The wildfire exterior provisions are widely written up as
+Chapter 7A of the California Building Code, and Chapter 7A now reads only "Provisions for
+Materials and Construction Methods for Exterior Wildfire Exposure are now located in Part
+7, California Wildland-Urban Interface Code." The page states the requirement, names both,
+and explains the discrepancy rather than repeating the stale name. No permit counts or
+approval timelines are printed anywhere, and the Los Angeles County rebuild programme is
+linked rather than described, so the page does not go stale as that programme changes.
+
+No financing band on this page. It sits on every other long page and it reads wrong
+against a total loss.
 
 ---
 

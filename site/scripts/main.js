@@ -85,6 +85,46 @@ if (videoDialog && videoDialogPlayer && videoDialogTitle && videoDialogClose) {
   });
 }
 
+/* The printed service sheets. Only the ones that exist at a size worth reading
+   are marked up as links, so the small thumbnails never reach this at all.
+   With JavaScript off the link still works, it just opens the sheet on its own
+   rather than over the page. */
+const sheetDialog = document.querySelector('.sheet-dialog');
+const sheetDialogImage = document.querySelector('.sheet-dialog-image');
+const sheetDialogTitle = document.querySelector('#expanded-sheet-title');
+const sheetDialogClose = document.querySelector('.sheet-dialog-close');
+
+if (sheetDialog && sheetDialogImage && sheetDialogTitle && sheetDialogClose) {
+  document.querySelectorAll('a.sheet-paper').forEach((link) => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      sheetDialogImage.src = link.href;
+      sheetDialogImage.alt = link.querySelector('img')?.alt || '';
+      sheetDialogTitle.textContent = link.dataset.sheetTitle || '';
+      sheetDialog.showModal();
+    });
+  });
+
+  /* Drop the sheet on the way out. Holding it would mean the next one opens
+     showing the previous sheet until the new file has decoded. The close event
+     covers Escape, and clearing here covers the two paths we drive ourselves,
+     because that event does not fire everywhere. */
+  const closeSheet = () => {
+    sheetDialog.close();
+    sheetDialogImage.removeAttribute('src');
+  };
+
+  sheetDialogClose.addEventListener('click', closeSheet);
+
+  sheetDialog.addEventListener('click', (event) => {
+    if (event.target === sheetDialog) closeSheet();
+  });
+
+  sheetDialog.addEventListener('close', () => {
+    sheetDialogImage.removeAttribute('src');
+  });
+}
+
 /* The hero opens on the finished house, walks back through the two stages that
    built it, and comes to rest on the finished house again. It runs once, never
    loops, and never starts at all if the visitor has asked for reduced motion.

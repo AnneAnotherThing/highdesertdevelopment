@@ -60,6 +60,33 @@ septic system. Those answers move the cost of a build more than the house design
 does, and they can be established from a parcel number before any money is spent
 on plans. See https://highdesertdevelopment.com/cost-to-build-on-a-lot.html
 
+## Rebuilding after a fire
+
+Rebuild work is taken on, including Altadena and the foothill communities. A lot
+that had a house on it is already an established building site, so the open
+questions are different from raw land: whether the foundation survived the heat,
+which an engineer establishes rather than a site walk, and what condition the
+sewer or septic connection, water service and conduit runs are in. Site
+clearance has to be completed and documented before anything is permitted, and
+Los Angeles County publishes the current requirements at
+https://recovery.lacounty.gov/rebuilding/. Rebuilding close to the footprint,
+size and design of the house that was lost goes through a faster permit route
+than a redesign. A house rebuilt in a high fire hazard zone has to meet
+California's wildfire construction standards on ignition-resistant or
+noncombustible exterior materials and ember-resistant vents; guides written
+before 2026 call this Chapter 7A of the building code, and those provisions now
+sit in the California Wildland-Urban Interface Code.
+
+California treats rebuilding a home as home improvement work, so four contract
+rules apply: the deposit cannot exceed $1,000 or 10 percent of the contract
+price, whichever is less; the right to cancel is seven business days rather than
+three where a state or local emergency was declared for the event that damaged
+the property; the contract must state a fixed total price and a payment schedule
+in dollars, which time and materials and cost plus do not; and change orders are
+signed before the work. Any contractor's licence can be checked free at
+https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/CheckLicense.aspx
+See https://highdesertdevelopment.com/rebuilding-after-a-fire.html
+
 ## Other
 
 10 percent discount for veterans.
@@ -75,4 +102,6 @@ Facebook: https://www.facebook.com/highdesertdevelopment/
   construction financing works
 - https://highdesertdevelopment.com/cost-to-build-on-a-lot.html building on a
   vacant lot in the High Desert
+- https://highdesertdevelopment.com/rebuilding-after-a-fire.html rebuilding a
+  home after a fire, and the contract rules that apply
 - https://highdesertdevelopment.com/contact.html estimates
