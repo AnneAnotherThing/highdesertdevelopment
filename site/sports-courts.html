@@ -22,8 +22,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/main.css?v=20260815a">
-  <script src="scripts/main.js?v=20260815a" defer></script>
+  <link rel="stylesheet" href="styles/main.css?v=20260815e">
+  <script src="scripts/main.js?v=20260815e" defer></script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Pickleball, Tennis and Basketball Court Construction, Antelope Valley and High Desert", "serviceType": "Sports court construction, pickleball courts, tennis courts, basketball courts, indoor and outdoor", "provider": {"@type": "GeneralContractor", "name": "High Desert Development", "telephone": "+1-760-382-2658", "url": "https://highdesertdevelopment.com/", "areaServed": "Antelope Valley and High Desert, California"}, "areaServed": [{"@type": "AdministrativeArea", "name": "Kern County, California"}, {"@type": "AdministrativeArea", "name": "Los Angeles County, California"}, {"@type": "AdministrativeArea", "name": "San Bernardino County, California"}], "url": "https://highdesertdevelopment.com/sports-courts.html"}</script>
 </head>
 <body>
@@ -97,13 +97,24 @@
         <p class="sheet-lede">Built for performance, built to last. The sheet covers court design and layout, surfacing, custom sizing, fencing, netting and lighting.</p>
         <div class="sheet-rack">
           <figure class="sheet">
-            <span class="sheet-paper">
-              <img src="images/pickle_court-193w.webp" width="193" height="240" loading="lazy" alt="High Desert Development custom pickleball courts sheet advertising backyard sports court construction, with court design and layout, professional surfacing, custom sizing, fencing, netting and lighting.">
-            </span>
-            <figcaption>Custom pickleball courts</figcaption>
+            <a class="sheet-paper" href="images/pickle_court-482w.webp" data-sheet-title="Custom pickleball courts">
+              <picture>
+                <source srcset="images/pickle_court-193w.webp 193w, images/pickle_court-482w.webp 482w" sizes="210px">
+                <img src="images/pickle_court-193w.webp" width="193" height="240" loading="lazy" alt="High Desert Development custom pickleball courts sheet advertising backyard sports court construction, with court design and layout, professional surfacing, custom sizing, fencing, netting and lighting.">
+              </picture>
+            </a>
+            <figcaption>Custom pickleball courts<span class="sheet-open-note">Open full size</span></figcaption>
           </figure>
         </div>
       </div>
+
+      <dialog class="sheet-dialog" aria-labelledby="expanded-sheet-title">
+        <div class="sheet-dialog-header">
+          <h3 class="sheet-dialog-title" id="expanded-sheet-title">Service sheet</h3>
+          <button class="sheet-dialog-close" type="button" aria-label="Close the expanded sheet">Close</button>
+        </div>
+        <figure class="sheet-dialog-figure"><img class="sheet-dialog-image" alt=""></figure>
+      </dialog>
     </section>
 
     <section id="contact" class="contact-band" aria-labelledby="contact-title">

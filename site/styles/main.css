@@ -703,6 +703,9 @@ p:last-child { margin-bottom: 0; }
   justify-content: start; gap: 2.25rem 1.75rem; margin-top: 2.5rem;
 }
 .sheet { margin: 0; }
+/* One of the sheets is landscape. At a portrait card's width it would come out
+   half the height of everything beside it, so it takes two tracks. */
+.sheet--wide { grid-column: span 2; }
 
 /* A narrow white mat, so a dark poster reads as a sheet lying on the warm
    ground rather than a hole cut in it. */
