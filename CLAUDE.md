@@ -35,7 +35,16 @@ kept only for the record.
 small. The repo is the deploy source now, so anything left out of git is missing from the
 live site.
 
-Run it with `cd site && python3 -m http.server 8000`. That is the whole toolchain.
+**URLs are extensionless.** The files on disk are still `about.html`, but Cloudflare's
+static asset handling serves them at `/about` and 307s the `.html` form. So every
+canonical, `og:url`, JSON-LD `url`, sitemap entry, `llms.txt` link, internal `href` and
+the FormSubmit `_next` value uses `/about`, not `/about.html`. The homepage is `/`, not
+`/index.html`. Adding a page means using its extensionless URL everywhere. Old `.html`
+links still resolve, they are just not what the site points at.
+
+Run it with `cd site && npx wrangler dev`, which reproduces that URL handling. A plain
+`python3 -m http.server` still works for a quick look but serves files by exact name, so
+every extensionless link 404s and the site looks broken when it is not.
 
 The real bottleneck is not code: **Raymond told Jerry to upload the files to GoDaddy himself,
 and a contractor is not going to do that.** Getting the site live is part of the $500.
