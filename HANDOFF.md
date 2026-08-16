@@ -3,7 +3,7 @@
 `site/` is finished and upload-ready at 12 pages. Everything below is either off the website,
 blocked on Jerry, or a judgement call worth making deliberately rather than inheriting.
 
-## Ask Jerry these six things
+## Ask Jerry these four things
 
 Each one unblocks something specific that is currently written around.
 
@@ -14,23 +14,36 @@ Each one unblocks something specific that is currently written around.
    Right now the site explains how construction-to-permanent loans work generally and tells
    people to ask before signing. With the lender named it can say what his actually does,
    which is a much stronger page. Do not tighten this without the answer.
-3. **A photo of him.** The About page slot still holds a photo of his jobsite sign. The whole
-   site now argues that the owner is the one on your job, and the owner has no face on it.
-   This is the single highest-value thing he can hand over and it costs nothing.
-4. **Real job photos for commercial construction.** That gallery has one real photo, and the
-   every-trade sheet now sits in its own band below rather than padding out the grid. He has
-   hundreds of pictures. Any three or four good ones fill it.
-   While asking: **the print files for six of the seven sheets.** Only the commercial
-   concrete and stamped concrete sheets survive at a size worth reading. The rest came over
-   as thumbnails between 182 and 210px wide, so they are drawn small and cannot be enlarged.
-   Whatever he sent to the printer would let all of them open full size. The stamped concrete
-   sheet also needs a re-export: the file is clipped on the right edge, and its contact strip
-   prints 760-382-3948, which is why the strip is cropped off on the site.
-5. **Testimonials.** A few lines from past customers, if there are any he is comfortable
-   asking. There is no social proof on the site at all.
-6. **Is he a veteran himself?** He offers a 10% veterans discount. If he is one, there are
+3. **The print files for the sheets.** Only the commercial concrete and stamped concrete
+   sheets came over at a size worth reading. Four others arrived as thumbnails between 182
+   and 210px wide and are now shown from 2.5x enlargements, which reads but is not sharp.
+   Whatever went to the printer would fix that. The stamped concrete sheet also wants a
+   re-export: the file is clipped on its right edge, and its contact strip prints
+   760-382-3948, which is why that strip is cropped off on the site.
+4. **Is he a veteran himself?** He offers a 10% veterans discount. If he is one, there are
    California certifications that carry real weight on public bid work. This was deliberately
    kept out of writing because it is a question, not a finding.
+
+### Dropped on purpose, 2026-08-15. Do not reopen these.
+
+Anne pulled three asks that had been on this list since the audit. They are not oversights
+and they should not come back into a report or an email unless she raises them herself.
+
+- **A photo of Jerry.** He is not providing one. The About page keeps the jobsite sign.
+- **Real job photos** for the commercial and ADU galleries. Both stay at one photo each.
+- **Testimonials.** The site carries no social proof and that is accepted.
+
+The site was written to survive this. The argument that the owner is on every job is carried
+in words across the hero, the proof bar, the About page, the FAQ, `llms.txt` and the footer
+rather than resting on a portrait, and the thin galleries now sit next to substantial copy on
+both pages rather than looking empty.
+
+### Anne is doing the Google Business Profile
+
+It moved off Jerry's list and onto hers on 2026-08-15, because he is Shermaine's brother.
+Profile setup is normally included in her $2,500 build and not in his $500 one, which the
+email says once and then sets aside. Set it up as a **service area business** across the
+radius with **no street address**, connect it to the site, and hand Jerry the login.
 
 ## Still to do, on the site
 
