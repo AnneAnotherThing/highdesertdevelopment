@@ -11,3 +11,9 @@ Gemini_Generated_Image_*.jpeg
 
 # Empty clone of the GitHub repo, created while wiring up the deploy
 highdesertdevelopment/
+
+# --- Client correspondence / internal: offline only ---
+*-email.html
+*-email.txt
+HANDOFF.md
+reference/
