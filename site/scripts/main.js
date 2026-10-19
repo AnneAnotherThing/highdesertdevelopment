@@ -85,6 +85,22 @@ if (videoDialog && videoDialogPlayer && videoDialogTitle && videoDialogClose) {
   });
 }
 
+/* The walkthrough players load on a click, not on arrival. Two Vimeo iframes
+   on the homepage were blocking the back and forward cache and dragging Speed
+   Index, for a video most visitors never play. The facade carries the same src
+   the dialog uses, so nothing else had to change. */
+document.querySelectorAll('.video-facade').forEach((facade) => {
+  facade.addEventListener('click', () => {
+    const iframe = document.createElement('iframe');
+    iframe.src = `${facade.dataset.videoSrc}&autoplay=1`;
+    iframe.title = (facade.getAttribute('aria-label') || '').replace(/^Watch the walkthrough:\s*/, '');
+    iframe.allow = 'autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share';
+    iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+    iframe.allowFullscreen = true;
+    facade.replaceWith(iframe);
+  });
+});
+
 /* The printed service sheets. Only the ones that exist at a size worth reading
    are marked up as links, so the small thumbnails never reach this at all.
    With JavaScript off the link still works, it just opens the sheet on its own
@@ -100,6 +116,15 @@ if (sheetDialog && sheetDialogImage && sheetDialogTitle && sheetDialogClose) {
       event.preventDefault();
       sheetDialogImage.src = link.href;
       sheetDialogImage.alt = link.querySelector('img')?.alt || '';
+      /* Carry the card's own dimensions across so the dialog image has an
+         aspect ratio before it decodes. The element has no src until now, so
+         fixed width and height attributes in the markup would be wrong: each
+         sheet is a different shape. */
+      const card = link.querySelector('img');
+      if (card?.width && card?.height) {
+        sheetDialogImage.width = card.width;
+        sheetDialogImage.height = card.height;
+      }
       sheetDialogTitle.textContent = link.dataset.sheetTitle || '';
       sheetDialog.showModal();
     });

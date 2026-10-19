@@ -947,6 +947,34 @@ a.sheet-paper:focus-visible {
   border: 1px solid rgb(216 195 165 / 30%);
 }
 .video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+/* The players used to load on arrival. Two Vimeo iframes were the reason the
+   page could not use the back and forward cache and the biggest single drag on
+   Speed Index, so each one sits behind a facade and only loads on a click. */
+.video-facade {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 0.85rem; cursor: pointer;
+  border: 0; padding: 1rem;
+  background:
+    radial-gradient(120% 90% at 50% 40%, rgb(155 96 37 / 22%), transparent 70%),
+    linear-gradient(180deg, #1b3550 0%, #16304a 100%);
+  background-color: var(--navy);
+  color: #fff; font-family: var(--head);
+  transition: background-color 0.18s ease;
+}
+.video-facade:hover,
+.video-facade:focus-visible { background-color: #1d3a56; }
+.vf-play {
+  width: 58px; height: 58px; flex: none;
+  display: grid; place-items: center;
+  border: 2px solid var(--sand); border-radius: 50%;
+  font-size: 1.1rem; color: var(--sand); padding-left: 4px;
+}
+.vf-label {
+  font-size: 0.82rem; font-weight: 600; letter-spacing: 0.08em;
+  text-transform: uppercase; color: rgb(255 255 255 / 82%);
+}
 /* The extension sheet rides with the walkthroughs rather than with the
    remodeling gallery, because both are realtor pieces. On the ink band the
    white mat is doing the work the badge plate does elsewhere: without it a

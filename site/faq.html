@@ -27,9 +27,12 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/main.css?v=20260815e">
-  <script src="scripts/main.js?v=20260815e" defer></script>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Open+Sans:wght@400;600;700&amp;display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"></noscript>
+  <link rel="stylesheet" href="styles/main.css?v=20261019a">
+  <script src="scripts/main.js?v=20261019a" defer></script>
+  <script src="scripts/ga-events.js?v=20261019a" defer></script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -338,7 +341,7 @@ gtag('config', 'G-QFZS418E9R');
         <p class="veteran-discount">Ask us about our 10% off discount for veterans.</p>
         <div class="footer-external-links">
           <a class="new-website-button" href="contact">Request an estimate <span aria-hidden="true">&#8599;</span></a>
-          <a class="new-website-button facebook-button" href="https://www.facebook.com/highdesertdevelopment/" target="_blank" rel="noopener" aria-label="Visit High Desert Development on Facebook (opens in a new tab)"><span class="facebook-mark" aria-hidden="true">f</span> <span>More project photos <span aria-hidden="true">&#8599;</span></span></a>
+          <a class="new-website-button facebook-button" href="https://www.facebook.com/highdesertdevelopment/" target="_blank" rel="noopener" aria-label="More project photos on Facebook, opens in a new tab"><span class="facebook-mark" aria-hidden="true">f</span> <span>More project photos <span aria-hidden="true">&#8599;</span></span></a>
         </div>
       </div>
       <nav aria-label="Footer navigation">
