@@ -17,3 +17,6 @@ highdesertdevelopment/
 *-email.txt
 HANDOFF.md
 reference/
+
+# wrangler dev scratch
+site/.wrangler/
