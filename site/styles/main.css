@@ -682,6 +682,46 @@ p:last-child { margin-bottom: 0; }
 }
 .portfolio-actions { padding-bottom: 3rem; display: flex; gap: 0.85rem; flex-wrap: wrap; }
 
+/* ---------- what customers say ---------- */
+
+/* Real Google reviews, quoted with the reviewer's name and a link to the rest.
+   No count and no star average on the page on purpose: those change on Google
+   and a number typed in here would quietly go stale. */
+.reviews-band {
+  background: var(--ink); color: #fff;
+  padding-block: 4rem;
+  border-top: 3px solid var(--bronze);
+}
+.reviews-band h2 { color: #fff; margin-bottom: 0.5rem; }
+.reviews-band .section-kicker { color: var(--bronze-txt); }
+.reviews-lede { color: rgb(255 255 255 / 78%); max-width: 44rem; margin: 0 0 2.25rem; }
+
+.review-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+  gap: 1.5rem;
+}
+.review {
+  margin: 0; padding: 1.5rem 1.6rem;
+  background: rgb(255 255 255 / 5%);
+  border: 1px solid rgb(216 195 165 / 26%);
+  border-left: 3px solid var(--bronze-lit);
+}
+.review blockquote {
+  margin: 0 0 1rem; padding: 0;
+  color: rgb(255 255 255 / 90%); font-size: 1.02rem; line-height: 1.66;
+}
+.review figcaption {
+  font: 700 0.9rem var(--head); color: var(--sand);
+  letter-spacing: 0.01em;
+}
+.review figcaption span {
+  display: block; margin-top: 0.15rem;
+  font: 600 0.78rem var(--head); letter-spacing: 0.08em; text-transform: uppercase;
+  color: rgb(255 255 255 / 52%);
+}
+.reviews-actions { margin-top: 2rem; }
+.reviews-actions a { color: var(--bronze-txt); font-weight: 600; }
+
 /* ---------- service sheets ---------- */
 
 /* The printed flyers used to sit in the photo grids, where a portrait poster
