@@ -342,6 +342,12 @@ p:last-child { margin-bottom: 0; }
 .hero-content .eyebrow::before {
   content: ""; width: 2.75rem; height: 1px; background: var(--sand); flex: none;
 }
+/* The company badge, the same mark as the nav and the intro, sits above the
+   kicker so the hero carries the brand before the headline. */
+.hero-badge {
+  display: block; width: 116px; height: auto; margin: 0 0 1.4rem;
+  filter: drop-shadow(0 6px 18px rgb(8 24 37 / 55%));
+}
 .hero h1 {
   color: #fff; max-width: 17ch; margin: 0;
   font-size: clamp(2.2rem, 5vw, 4.3rem);
@@ -1083,6 +1089,7 @@ a.sheet-paper:focus-visible {
 
   .hero { min-height: 520px; }
   .hero-content { padding: 4.5rem 0 3rem; }
+  .hero-badge { width: 88px; margin-bottom: 1.1rem; }
   .hero-actions .button { width: 100%; }
   .interior-hero { min-height: 300px; }
   .interior-hero .hero-content { padding: 3rem 0 2.25rem; }
