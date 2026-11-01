@@ -237,3 +237,55 @@ videos are real Vimeo iframes that render empty only because the sandbox has no 
 - f7743de (live 2026-11-01 12:50 PM): FormSubmit `_cc` to highdesertdevelopment@yahoo.com, the address Jerry reads. Delivery stays on anne@hive-rise.com, which is proven.
 - This change: `_cc` also carries jerry@highdesertdevelopment.com (his Microsoft 365 mailbox), at Anne's ask. A copy address cannot break delivery, so a new mailbox is safe there.
 - Proof still owed: one TEST inquiry, then check all three inboxes.
+
+## 2026-11-01: the contact form rebuilt, and sending moved in house
+
+Not live. Committed and waiting on Anne's word. The site keeps running the
+FormSubmit version until the new path is proven with a real test message.
+
+### The form
+
+| | before | after |
+|---|---|---|
+| Picking a service | a dropdown carrying nine options | nine tap targets, readable at a glance |
+| The project description | half width, beside a one line city field | full width |
+| Fields grouped | one flat list | three numbered steps |
+| After you send | a line of text under a form still asking to be filled in | the form is replaced by a confirmation that uses your name |
+| Named in the heading | "Project inquiry" | "Tell Jerry about your project" |
+| Third party named in the copy | FormSubmit, in the fine print | none |
+
+The service buttons are real radio inputs, visually hidden, so the keyboard
+and a screen reader get a labelled radio group. Nothing is faked in script.
+The honeypot stayed. The carry-over that preselects whichever service you last
+clicked on the homepage stayed, and was re-checked end to end.
+
+### Sending
+
+Was: a form post to FormSubmit, which emailed it on.
+Now: `site/worker.js`, posting through Resend, behind a Cloudflare Turnstile check.
+
+This is the first server-side code on the site. The deploy was an assets-only
+Worker, so `wrangler.jsonc` gained `main` and an `ASSETS` binding. Cloudflare
+tries the asset layer first, so all 14 pages, the extensionless URLs, `_headers`
+and the 404 behave exactly as before. Verified against `wrangler dev`: 14 pages
+200, `/about.html` still 307, a made-up URL still 404.
+
+Delivery goes to highdesertdevelopment@yahoo.com and
+jerry@highdesertdevelopment.com, copies anne@hive-rise.com, and replies to the
+customer. The endpoint rejects a cross-site origin, drops a filled honeypot
+silently, caps every field, and escapes everything it puts in the email.
+
+### Closed while in there
+
+- **`/wrangler.jsonc` and `/README-GODADDY-UPLOAD.txt` were downloadable from
+  the live domain.** The assets directory is `./`, so every file in `site/` was
+  being served. A new `.assetsignore` covers those two, `worker.js` and
+  `.dev.vars`. Checked against the live site before the change: both returned 200.
+- **The contact page scrolled sideways by 9px on a 390px phone.** Pre-existing,
+  and measured with the new form removed to be sure. The Google Maps embed
+  carries `width="600"` as an attribute and a grid item will not shrink below
+  its contents, so the whole left column was dragged out. Two lines. The page is
+  back to the zero horizontal overflow the rest of the site is held to.
+- `privacy.html` named FormSubmit and said inquiries went to Jerry "and nowhere
+  else". Both were out of date. It now names Resend and Turnstile and says a
+  copy goes to Hive-Rise.

@@ -20,3 +20,6 @@ reference/
 
 # wrangler dev scratch
 site/.wrangler/
+
+# wrangler local secrets, never committed
+site/.dev.vars

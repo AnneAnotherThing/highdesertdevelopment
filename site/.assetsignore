@@ -1,0 +1,10 @@
+# Files that live in /site but are NOT part of the website.
+#
+# The assets directory is "./", so without this list every one of these would
+# be downloadable from the live domain. The Worker script and the deploy config
+# are build inputs, not pages.
+worker.js
+wrangler.jsonc
+.assetsignore
+README-GODADDY-UPLOAD.txt
+.dev.vars

@@ -28,9 +28,10 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Open+Sans:wght@400;600;700&amp;display=swap">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet" media="print" onload="this.media='all';this.onload=null">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"></noscript>
-  <link rel="stylesheet" href="styles/main.css?v=20261028">
-  <script src="scripts/main.js?v=20261019a" defer></script>
-  <script src="scripts/ga-events.js?v=20261019a" defer></script>
+  <link rel="stylesheet" href="styles/main.css?v=20261101a">
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  <script src="scripts/main.js?v=20261101a" defer></script>
+  <script src="scripts/ga-events.js?v=20261101a" defer></script>
 <!-- Google Analytics 4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QFZS418E9R"></script>
 <script>
@@ -138,20 +139,65 @@ gtag('config', 'G-QFZS418E9R');
           <a class="button button-primary service-map-link" href="https://www.google.com/maps/search/?api=1&amp;query=California+City%2C+CA" target="_blank" rel="noopener">Open California City in Google Maps <span aria-hidden="true">↗</span></a>
         </article>
       </div>
-      <form id="project-form" class="project-form" method="post" action="https://formsubmit.co/anne@hive-rise.com" aria-labelledby="project-form-title" aria-describedby="required-note">
-        <input type="hidden" name="_subject" value="New project inquiry from the High Desert Development website">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_cc" value="highdesertdevelopment@yahoo.com,jerry@highdesertdevelopment.com">
-        <input type="hidden" name="_next" value="https://highdesertdevelopment.com/contact?sent=true">
+      <div class="inquiry-slot">
+      <form id="project-form" class="project-form inquiry" method="post" action="/api/inquiry" aria-labelledby="inquiry-title">
         <input class="form-trap" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <h2 id="project-form-title">Project inquiry</h2><p id="required-note" class="required-note">Fields marked with an asterisk (*) are required.</p>
-        <div class="form-grid"><div class="form-field"><label for="name">Name or company <span class="req" aria-hidden="true">*</span></label><input id="name" name="name" type="text" autocomplete="name" required></div><div class="form-field"><label for="email">Email <span class="req" aria-hidden="true">*</span></label><input id="email" name="email" type="email" autocomplete="email" required></div></div>
-        <div class="form-grid"><div class="form-field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div><div class="form-field"><label for="service">Service needed <span class="req" aria-hidden="true">*</span></label><select id="service" name="service" required><option value="">Select a service</option><option value="utilities">Underground utilities</option><option value="septic">Sewer or septic</option><option value="concrete">Concrete or masonry</option><option value="commercial">Commercial construction</option><option value="residential">Custom residential</option><option value="adu">Custom ADU</option><option value="remodeling">Remodeling</option><option value="courts">Sports courts</option><option value="other">Other or not sure</option></select></div></div>
-        <div class="form-grid"><div class="form-field"><label for="location">Project city or area</label><input id="location" name="location" type="text" autocomplete="address-level2"></div><div class="form-field"><label for="details">Tell us about your project <span class="req" aria-hidden="true">*</span></label><textarea id="details" name="details" required></textarea></div></div>
-        <button class="button button-primary" type="submit">Email Project Inquiry</button>
-        <p class="required-note">Submitting this form sends the project details to High Desert Development through FormSubmit.</p>
-        <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+        <div class="inquiry-head">
+          <p class="section-kicker">Start here</p>
+          <h2 id="inquiry-title">Tell Jerry about your project</h2>
+          <p class="inquiry-lede">Jerry reads these himself. Fields marked <span class="req">*</span> are the ones he needs in order to get back to you.</p>
+        </div>
+        <div class="inquiry-body">
+          <fieldset class="inquiry-step">
+            <legend><span class="step-n" aria-hidden="true">1</span> What do you need? <span class="req">*</span></legend>
+            <div class="pick-grid">
+              <input type="radio" id="svc-utilities" name="service" value="utilities" required><label class="pick" for="svc-utilities">Underground utilities</label>
+              <input type="radio" id="svc-septic" name="service" value="septic"><label class="pick" for="svc-septic">Sewer or septic</label>
+              <input type="radio" id="svc-concrete" name="service" value="concrete"><label class="pick" for="svc-concrete">Concrete or masonry</label>
+              <input type="radio" id="svc-residential" name="service" value="residential"><label class="pick" for="svc-residential">Custom residential</label>
+              <input type="radio" id="svc-adu" name="service" value="adu"><label class="pick" for="svc-adu">Custom ADU</label>
+              <input type="radio" id="svc-remodeling" name="service" value="remodeling"><label class="pick" for="svc-remodeling">Remodeling</label>
+              <input type="radio" id="svc-commercial" name="service" value="commercial"><label class="pick" for="svc-commercial">Commercial construction</label>
+              <input type="radio" id="svc-courts" name="service" value="courts"><label class="pick" for="svc-courts">Sports courts</label>
+              <input type="radio" id="svc-other" name="service" value="other"><label class="pick" for="svc-other">Other or not sure</label>
+            </div>
+          </fieldset>
+          <fieldset class="inquiry-step">
+            <legend><span class="step-n" aria-hidden="true">2</span> How does Jerry reach you?</legend>
+            <div class="form-grid">
+              <div class="form-field"><label for="name">Name or company <span class="req" aria-hidden="true">*</span></label><input id="name" name="name" type="text" autocomplete="name" required></div>
+              <div class="form-field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel"></div>
+            </div>
+            <div class="form-field"><label for="email">Email <span class="req" aria-hidden="true">*</span></label><input id="email" name="email" type="email" autocomplete="email" required></div>
+          </fieldset>
+          <fieldset class="inquiry-step">
+            <legend><span class="step-n" aria-hidden="true">3</span> Where is it, and what is it?</legend>
+            <div class="form-field"><label for="location">Project city or area</label><input id="location" name="location" type="text" autocomplete="address-level2" placeholder="Lancaster, Mojave, Victorville"></div>
+            <div class="form-field"><label for="details">The project <span class="req" aria-hidden="true">*</span></label><textarea id="details" name="details" required placeholder="What you are planning, the stage it is at, and anything that matters about the site."></textarea></div>
+          </fieldset>
+          <div class="inquiry-send">
+            <!-- Turnstile is Cloudflare's spam check. The key below is Cloudflare's
+                 published ALWAYS-PASSES TEST key, so the form works end to end
+                 before Jerry's own key exists. Swap it for the real site key from
+                 the Cloudflare dashboard at cutover. -->
+            <div class="inquiry-turnstile cf-turnstile" data-sitekey="1x00000000000000000000AA" data-theme="light"></div>
+            <button class="button button-primary" type="submit">Send this to Jerry</button>
+            <noscript><p class="inquiry-fineprint">This form needs JavaScript for its spam check. With it switched off, call <a class="tel-link" href="tel:+17603822658">760-382-2658</a> instead.</p></noscript>
+            <p class="inquiry-fineprint">Your details are used to answer you and nothing else. <a href="/privacy">How this site handles them</a>.</p>
+            <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+          </div>
+        </div>
       </form>
+      <div id="inquiry-done" class="project-form inquiry-done" tabindex="-1" hidden>
+        <div class="inquiry-done-mark" aria-hidden="true"><svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 10.5L9.5 18L24 2.5" stroke="#fff" stroke-width="3.2" stroke-linecap="square"/></svg></div>
+        <h2>Got it.</h2>
+        <p id="inquiry-done-line">Your project is with Jerry now. He will get back to you himself.</p>
+        <div class="inquiry-done-call">
+          <p>If it cannot wait, call him.</p>
+          <a class="tel-link" href="tel:+17603822658">760-382-2658</a>
+        </div>
+      </div>
+      </div>
     </section>
   </main>
   <footer class="site-footer">

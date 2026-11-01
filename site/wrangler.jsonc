@@ -1,13 +1,22 @@
 {
-  // Static site served straight from Cloudflare's edge. There is no Worker
-  // script and no build step: "assets" with no "main" is a valid
-  // assets-only deployment, which is exactly what this site is.
+  // Static site served straight from Cloudflare's edge, plus one small Worker
+  // script for the contact form.
   //
   // The Cloudflare project has its root directory set to /site, so wrangler
   // runs from inside this folder and "./" below is the site itself.
+  //
+  // Cloudflare tries the asset layer FIRST. Every one of the 14 pages, every
+  // extensionless URL and _headers all behave exactly as they did when this was
+  // an assets-only deployment. Only a path with no matching asset reaches
+  // worker.js, which answers /api/inquiry and hands everything else straight
+  // back to the asset layer. run_worker_first keeps /api/* reserved so no
+  // future file can ever shadow the form endpoint.
   "name": "highdesertdevelopment",
   "compatibility_date": "2026-08-13",
+  "main": "worker.js",
   "assets": {
-    "directory": "./"
+    "directory": "./",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*"]
   }
 }

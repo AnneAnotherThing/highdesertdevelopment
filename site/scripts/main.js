@@ -269,22 +269,86 @@ if (heroFrames.length > 1 && heroCaption) {
   openingReady.then(() => window.setTimeout(loadStages, 250));
 }
 
+/* The project inquiry form.
+
+   The form posts to /api/inquiry, which is worker.js. It is sent with fetch so
+   the visitor stays on the page and gets a real confirmation panel instead of
+   a round trip to a thank-you screen. The Worker also accepts an ordinary form
+   post and redirects back here, which is the path taken if fetch itself fails.
+
+   Turnstile needs JavaScript to draw its widget and mint a token, so a browser
+   with JavaScript off cannot submit at all. That case is answered by the
+   noscript block on the page, which sends the visitor to the phone. */
 if (projectForm) {
-  const savedService = JSON.parse(localStorage.getItem('hddLastService'))?.category;
-  const serviceSelect = projectForm.querySelector('#service');
   const formMessage = projectForm.querySelector('#form-message');
-  const submissionSent = new URLSearchParams(window.location.search).get('sent') === 'true';
+  const submitButton = projectForm.querySelector('button[type="submit"]');
+  const nameField = projectForm.querySelector('#name');
+  const donePanel = document.querySelector('#inquiry-done');
+  const doneLine = document.querySelector('#inquiry-done-line');
+  const params = new URLSearchParams(window.location.search);
 
-  if (submissionSent) {
-    formMessage.textContent = `Thank you. Your project inquiry has been emailed to High Desert Development.`;
+  const FAILED = 'That did not go through. Please try again, or call 760-382-2658 and Jerry will pick it up from there.';
+
+  const showMessage = (text, isError) => {
+    formMessage.textContent = text || '';
+    formMessage.classList.toggle('is-error', Boolean(isError && text));
+  };
+
+  const showDone = (firstName) => {
+    if (firstName) {
+      doneLine.textContent = `Your project is with Jerry now, ${firstName}. He will get back to you himself.`;
+    }
+    showMessage('');
+    projectForm.hidden = true;
+    donePanel.hidden = false;
+    donePanel.focus();
+  };
+
+  // Carry over whichever service the visitor was last reading about, so the
+  // step 1 answer is already filled in by the time they reach the form.
+  try {
+    const saved = JSON.parse(localStorage.getItem('hddLastService') || 'null');
+    const match = saved && projectForm.querySelector(`.pick-grid input[value="${CSS.escape(saved.category)}"]`);
+    if (match) match.checked = true;
+  } catch (err) {
+    /* No stored visit, or storage is blocked. The form works either way. */
   }
 
-  if (savedService && [...serviceSelect.options].some((option) => option.value === savedService)) {
-    serviceSelect.value = savedService;
-  }
+  // The redirect path back from the Worker. The message is fixed rather than
+  // read out of the query string, so a crafted link cannot put words on the page.
+  if (params.get('sent') === 'true') showDone('');
+  else if (params.has('error')) showMessage(FAILED, true);
 
-  projectForm.addEventListener('submit', (event) => {
-    formMessage.textContent = `Sending your project inquiry to High Desert Development…`;
+  projectForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    submitButton.disabled = true;
+    showMessage('Sending this to Jerry…');
+
+    let delivered = false;
+    try {
+      const response = await fetch(projectForm.action, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(Object.fromEntries(new FormData(projectForm).entries())),
+      });
+      const result = await response.json().catch(() => ({}));
+      if (response.ok && result.ok) {
+        delivered = true;
+        showDone(nameField.value.trim().split(/\s+/)[0]);
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', 'form_submit_ok', { form_id: 'project-form' });
+        }
+      } else {
+        showMessage(result.error || FAILED, true);
+      }
+    } catch (err) {
+      showMessage(FAILED, true);
+    }
+
+    if (!delivered) {
+      submitButton.disabled = false;
+      // A Turnstile token is good for one use, so a retry needs a fresh one.
+      if (window.turnstile) window.turnstile.reset();
+    }
   });
 }
-

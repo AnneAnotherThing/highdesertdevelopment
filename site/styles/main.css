@@ -1162,3 +1162,131 @@ a.sheet-paper:focus-visible {
   .hero h1 { font-size: clamp(2rem, 8.5vw, 2.7rem); max-width: 100%; }
   .hero-lede { font-size: 1.02rem; }
 }
+
+/* ---------------------------------------------------------------------------
+   The project inquiry form, rebuilt 2026-11-01.
+
+   The field chrome above (.form-field) was already right and is reused as is.
+   What changed is the shape of the thing. Before, the service was a dropdown
+   carrying nine options, which on a phone is a system picker you cannot see
+   past, and the two column grid paired a one line city field with the
+   textarea, so the most important field on the page was drawn at half width.
+
+   Now: the card opens with a sand header, the questions come in three numbered
+   steps, and the service is picked from tap targets you can read at a glance.
+   The radios are real radios, visually hidden, so the keyboard and a screen
+   reader get a labelled radio group and nothing is faked with JavaScript.
+   --------------------------------------------------------------------------- */
+
+.inquiry-slot { display: grid; align-content: start; }
+
+/* .project-form sets display:block, which outranks the user-agent rule behind
+   the hidden attribute, so without this the form stays on screen after it is
+   sent and the confirmation panel shows up before there is anything to
+   confirm. Both elements carry .project-form, so one rule covers both. */
+.project-form[hidden] { display: none; }
+
+/* The card trades its own padding for three bands of its own. Both selectors
+   are needed: .project-form alone is overridden at the mobile breakpoint. */
+.project-form.inquiry { padding: 0; }
+
+.inquiry-head {
+  padding: 1.9rem 2rem 1.6rem;
+  background: var(--sand-soft);
+  border-bottom: 1px solid var(--sand);
+}
+.inquiry-head h2 { margin: 0.35rem 0 0.6rem; }
+.inquiry-lede { margin: 0; font-size: 0.93rem; line-height: 1.6; color: var(--muted); }
+.inquiry-body { padding: 1.8rem 2rem 2rem; }
+
+.inquiry-step { margin: 0 0 1.9rem; padding: 0; border: 0; }
+.inquiry-step > legend {
+  display: flex; align-items: center; gap: 0.6rem;
+  margin: 0 0 1rem; padding: 0;
+  font: 700 0.95rem var(--head); color: var(--navy);
+}
+.step-n {
+  flex: none; display: grid; place-items: center;
+  width: 1.65rem; height: 1.65rem;
+  background: var(--ink); color: #fff;
+  font: 700 0.78rem var(--head);
+}
+
+/* Pick one of nine. auto-fit rather than a fixed column count, so the row
+   count follows the card width instead of a guess about it. */
+.pick-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(10.5rem, 1fr)); gap: 0.6rem; }
+.pick-grid input { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+.pick {
+  display: flex; align-items: center; gap: 0.6rem;
+  min-height: 3.15rem; padding: 0.7rem 0.85rem;
+  background: var(--sand-soft);
+  border: 1px solid var(--line); border-bottom-width: 2px;
+  font: 600 0.87rem/1.3 var(--head); color: var(--navy);
+  cursor: pointer;
+  transition: background 0.16s ease, border-color 0.16s ease, box-shadow 0.16s ease, transform 0.16s ease;
+}
+.pick::before {
+  content: ''; flex: none;
+  width: 1.05rem; height: 1.05rem;
+  background: #fff; border: 1px solid rgb(24 50 74 / 28%);
+}
+.pick:hover { background: #fff; border-color: rgb(24 50 74 / 32%); }
+.pick-grid input:focus-visible + .pick { outline: 3px solid rgb(155 96 37 / 45%); outline-offset: 2px; }
+.pick-grid input:checked + .pick {
+  background: #fff;
+  border-color: var(--bronze); border-bottom-color: var(--bronze);
+  box-shadow: inset 0 0 0 1px var(--bronze), 0 8px 18px rgb(155 96 37 / 16%);
+  color: var(--ink);
+  transform: translateY(-1px);
+}
+.pick-grid input:checked + .pick::before {
+  border-color: var(--bronze);
+  background: var(--bronze) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='10' viewBox='0 0 12 10'%3E%3Cpath d='M1 5.2L4.3 8.4L11 1.7' stroke='%23fff' stroke-width='2.1' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 0.72rem no-repeat;
+}
+
+.inquiry-send { padding-top: 1.5rem; border-top: 1px solid var(--line); }
+/* Turnstile draws itself in an iframe after the page settles. Holding the
+   height stops the button jumping down the moment it appears. */
+.inquiry-turnstile { min-height: 65px; }
+.inquiry-send .button { width: 100%; margin-top: 0.85rem; padding-block: 1.05rem; font-size: 1.02rem; }
+.inquiry-send .button[disabled] { opacity: 0.72; cursor: progress; transform: none; }
+.inquiry-fineprint { margin: 1rem 0 0; font-size: 0.82rem; line-height: 1.55; color: var(--muted); }
+.form-message.is-error:not(:empty) { border-left-color: #a3301f; color: #7d2417; }
+
+/* The confirmation is a panel of its own rather than a line of text under a
+   form that is still sitting there asking to be filled in again. */
+.inquiry-done { padding: 3rem 2rem 3.2rem; text-align: center; }
+.inquiry-done-mark {
+  width: 3.5rem; height: 3.5rem; margin: 0 auto 1.35rem;
+  display: grid; place-items: center;
+  background: var(--bronze);
+  box-shadow: 0 10px 24px rgb(155 96 37 / 28%);
+}
+.inquiry-done h2 { margin: 0 0 0.8rem; font-size: clamp(1.5rem, 2.6vw, 1.95rem); color: var(--ink); }
+.inquiry-done p { margin: 0 auto; max-width: 30rem; line-height: 1.65; color: var(--muted); }
+.inquiry-done-call { margin-top: 1.7rem; padding-top: 1.4rem; border-top: 1px solid var(--line); }
+.inquiry-done-call p { margin-bottom: 0.5rem; }
+.inquiry-done-call .tel-link { font: 700 1.35rem var(--head); color: var(--navy); }
+
+@media (max-width: 620px) {
+  .inquiry-head { padding: 1.5rem 1.25rem 1.3rem; }
+  .inquiry-body { padding: 1.5rem 1.25rem 1.75rem; }
+  .inquiry-done { padding: 2.5rem 1.25rem 2.7rem; }
+  /* minmax(0, 1fr) rather than 1fr: a plain 1fr track will not shrink below
+     its longest word, and "Underground utilities" is wider than half a
+     phone, which would push the whole page sideways. */
+  .pick-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.5rem; }
+  .pick { min-height: 3.4rem; font-size: 0.82rem; padding: 0.6rem 0.7rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pick { transition: none; }
+  .pick-grid input:checked + .pick { transform: none; }
+}
+
+/* Pre-existing, found while rebuilding the form: the contact page scrolled
+   sideways by 9px on a 390px phone. Two causes, and it needs both lines.
+   The Google Maps embed carries width="600" as an attribute, and a grid
+   item defaults to min-width:auto, so the column refused to shrink below
+   that embed and dragged every card in the left column out with it. */
+.contact-layout > * { min-width: 0; }
+.service-map-frame iframe { max-width: 100%; }
