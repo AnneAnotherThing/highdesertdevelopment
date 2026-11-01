@@ -228,3 +228,12 @@ will not happen on a real host.
 Checks that looked like defects and were not: all images do load (lazy-loaded), the skip link
 is correct focus-only behaviour, the contact map is a real Google iframe, and the walkthrough
 videos are real Vimeo iframes that render empty only because the sandbox has no network.
+
+---
+
+## 2026-11-01: contact form copies Jerry
+
+- Before: every inquiry went only to anne@hive-rise.com, and Anne forwarded each lead to Jerry by hand (the Oct 30 lead was forwarded at 12:38 PM).
+- f7743de (live 2026-11-01 12:50 PM): FormSubmit `_cc` to highdesertdevelopment@yahoo.com, the address Jerry reads. Delivery stays on anne@hive-rise.com, which is proven.
+- This change: `_cc` also carries jerry@highdesertdevelopment.com (his Microsoft 365 mailbox), at Anne's ask. A copy address cannot break delivery, so a new mailbox is safe there.
+- Proof still owed: one TEST inquiry, then check all three inboxes.
