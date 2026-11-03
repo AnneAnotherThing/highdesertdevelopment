@@ -8,3 +8,13 @@ wrangler.jsonc
 .assetsignore
 README-GODADDY-UPLOAD.txt
 .dev.vars
+
+# Local working files. These never exist in a GitHub-triggered build, because
+# that starts from a clean checkout, and .gitignore keeps them out of the repo.
+# They DO exist when someone runs `npx wrangler deploy` from their own machine,
+# and wrangler uploads from the filesystem rather than from git, so without
+# these lines a hand deploy publishes the local dev state. It did exactly that
+# on 2026-11-03 before this was added.
+.wrangler
+node_modules
+*.map
