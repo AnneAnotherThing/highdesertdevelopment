@@ -176,11 +176,12 @@ gtag('config', 'G-QFZS418E9R');
             <div class="form-field"><label for="details">The project <span class="req" aria-hidden="true">*</span></label><textarea id="details" name="details" required placeholder="What you are planning, the stage it is at, and anything that matters about the site."></textarea></div>
           </fieldset>
           <div class="inquiry-send">
-            <!-- Turnstile is Cloudflare's spam check. The key below is Cloudflare's
-                 published ALWAYS-PASSES TEST key, so the form works end to end
-                 before Jerry's own key exists. Swap it for the real site key from
-                 the Cloudflare dashboard at cutover. -->
-            <div class="inquiry-turnstile cf-turnstile" data-sitekey="1x00000000000000000000AA" data-theme="light"></div>
+            <!-- Turnstile is Cloudflare's spam check. This is High Desert's own
+                 site key, which is public by design and belongs in the page. The
+                 matching secret is a Worker secret and is never in the source.
+                 The hostname list on the widget decides where it is allowed to
+                 draw, so a new domain has to be added there as well as here. -->
+            <div class="inquiry-turnstile cf-turnstile" data-sitekey="0x4AAAAAAFxQ5AzZ-hTaz7-9" data-theme="light"></div>
             <button class="button button-primary" type="submit">Send this to Jerry</button>
             <noscript><p class="inquiry-fineprint">This form needs JavaScript for its spam check. With it switched off, call <a class="tel-link" href="tel:+17603822658">760-382-2658</a> instead.</p></noscript>
             <p class="inquiry-fineprint">Your details are used to answer you and nothing else. <a href="/privacy">How this site handles them</a>.</p>
