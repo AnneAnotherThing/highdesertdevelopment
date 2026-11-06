@@ -1070,7 +1070,12 @@ a.sheet-paper:focus-visible {
   display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
   font-size: 0.82rem; color: rgb(255 255 255 / 55%);
 }
-.copyright { margin: 0; }
+/* All three sit on one flex line, so none of them carries the global
+   paragraph margin. This used to be `.copyright { margin: 0 }`, which was
+   enough while the licence line was the last child and had its bottom margin
+   zeroed for it. Adding the credit beside them broke that assumption. */
+.footer-meta p { margin: 0; }
+.footer-credit .heart { vertical-align: -1px; }
 
 /* ---------- responsive ---------- */
 
