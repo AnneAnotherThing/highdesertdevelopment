@@ -1093,9 +1093,19 @@ a.sheet-paper:focus-visible {
   .contact-inner { grid-template-columns: 1fr; }
 }
 
-/* The full nav with FAQ and the call button needs about 830px, so the menu
-   collapses at 860 while the page grids hold their tablet layout until 760. */
-@media (max-width: 860px) {
+/* The full nav needs the whole shell, not just its own run of links. The old
+   note here costed the links at about 830px and collapsed the menu at 860,
+   which left out the roughly 260px brand block and the call button beside it.
+   The result was a header that overlapped itself for every visitor between
+   861 and 1000: at 900 the word Home sat on top of DEVELOPMENT, and both
+   "Our Work" and the California Contractor tag broke onto second lines.
+
+   Measured rather than estimated, by rendering the real header at 880, 940,
+   1000, 1060 and 1120: 880 and 940 both break, and 1000 is the first width
+   where every link, the wordmark and the call button sit on one clean line.
+   So the full nav starts at 1000 and the menu button covers everything below.
+   The page grids still hold their tablet layout until 760. */
+@media (max-width: 999px) {
   :root { --header-h: 78px; }
   .header-inner { min-height: 78px; gap: 1rem; }
   .brand-logo { width: 68px; height: 60px; }
