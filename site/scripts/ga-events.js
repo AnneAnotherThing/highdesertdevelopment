@@ -15,6 +15,40 @@
     send("tap_to_call", { phone_number: num, page_path: location.pathname });
   }, true);
 
+  // The contact card at /card. One listener for its three taps, because they
+  // are all "someone was handed the phone and did something with it".
+  //
+  //   review_tap    the Leave a Google review button, which goes to /review
+  //   save_contact  the vCard download
+  //   text_tap      the sms: link, the only one on the site
+  //
+  // review_tap counts taps, not scans. Somebody who points a camera at the
+  // printed QR lands on /review without ever loading a page that runs this
+  // file, so the redirect itself is invisible here. Page views on /card and
+  // the Google listing's own stats are where the scans show up.
+  document.addEventListener("click", function (e) {
+    var a = e.target && e.target.closest ? e.target.closest("a[href]") : null;
+    if (!a) return;
+    var href = a.getAttribute("href") || "";
+
+    if (/^sms:/i.test(href)) {
+      var num = href.replace(/^sms:/i, "").replace(/[^0-9+]/g, "");
+      send("text_tap", { phone_number: num, page_path: location.pathname });
+      return;
+    }
+    if (/\.vcf($|\?)/i.test(href)) {
+      send("save_contact", { page_path: location.pathname });
+      return;
+    }
+    // Resolved against the current page, so "review", "/review" and the full
+    // address all count, and a trailing slash does not split the numbers.
+    var path;
+    try { path = new URL(a.href, location.href).pathname; } catch (err) { return; }
+    if (path.replace(/\/+$/, "") === "/review") {
+      send("review_tap", { page_path: location.pathname });
+    }
+  }, true);
+
   // The contact form posts to FormSubmit, which redirects back to
   // /contact?sent=true when it accepted the submission. That redirect is the
   // only honest signal the site gets that a lead went out, so it is what fires

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jerry Heller, High Desert Development. Call, save the contact, or leave a Google review.">
+  <!-- Not a page for search. It is the screen Jerry hands his phone over on,
+       reached by someone standing in front of him. Keep it out of the index,
+       out of sitemap.xml and out of both navs. -->
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0d2133">
+  <title>Jerry Heller, High Desert Development</title>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Open+Sans:wght@400;600;700&amp;display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"></noscript>
+  <link rel="preload" as="image" href="images/high-desert-development-logo.png" fetchpriority="high">
+  <link rel="stylesheet" href="styles/main.css?v=20261106b">
+  <script src="scripts/ga-events.js?v=20261106b" defer></script>
+
+  <style>
+    /* The card is standalone: no site header, no nav, one column, thumb
+       reachable. It borrows main.css for the tokens, the type and the raised
+       buttons so it reads as the same brand. */
+    .card-page { background: var(--ink); }
+    .card {
+      width: min(100% - 2rem, 34rem);
+      margin-inline: auto;
+      padding-block: 2.25rem 1rem;
+    }
+
+    .card-face { text-align: center; color: #fff; }
+    .card-badge { width: 180px; height: auto; margin: 0 auto 1.25rem; }
+    .card-name {
+      font: 800 1.9rem/1.1 var(--head); color: #fff;
+      letter-spacing: -0.02em; margin: 0 0 0.3rem;
+    }
+    .card-role {
+      font: 700 0.76rem var(--head); letter-spacing: 0.17em;
+      text-transform: uppercase; color: var(--bronze-txt); margin: 0 0 1rem;
+    }
+    .card-line {
+      margin: 0 auto; max-width: 30rem;
+      color: rgb(255 255 255 / 86%); font-size: 1.02rem; line-height: 1.6;
+    }
+    .card-line strong { color: #fff; font-weight: 700; }
+    .card-licence {
+      margin: 1rem 0 0; font: 600 0.78rem var(--head);
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: rgb(216 195 165 / 85%);
+    }
+
+    /* One full-width action, then two pairs. The pairs collapse to single
+       column under 420px so no label ever has to shrink to fit. */
+    .card-actions { display: grid; gap: 0.7rem; margin-top: 2rem; }
+    .card-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; }
+    .card-actions .button { width: 100%; }
+    @media (max-width: 420px) { .card-pair { grid-template-columns: 1fr; } }
+
+    /* Review panel. This is the reason Jerry hands the phone over, so it sits
+       directly under the actions rather than at the foot of the page. */
+    .card-review {
+      margin-top: 2rem; padding: 1.6rem 1.25rem;
+      background: #fff; text-align: center;
+    }
+    .card-review h2 {
+      font-size: 1.3rem; margin: 0 0 0.5rem; color: var(--navy);
+    }
+    .card-review p {
+      margin: 0 auto 1.25rem; max-width: 26rem;
+      color: var(--muted); font-size: 0.98rem; line-height: 1.6;
+    }
+    .card-qr {
+      width: min(260px, 72%); height: auto; margin: 0 auto 1.25rem;
+      border: 1px solid var(--line);
+    }
+    .card-review .button { width: 100%; }
+    .card-qr-download {
+      display: inline-block; margin-top: 0.9rem;
+      font: 700 0.78rem var(--head); letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--bronze);
+    }
+
+    .card-foot {
+      width: min(100% - 2rem, 34rem); margin-inline: auto;
+      padding-block: 1.75rem 2.5rem; text-align: center;
+      color: rgb(255 255 255 / 62%); font-size: 0.82rem;
+    }
+    .card-foot a { color: var(--bronze-txt); }
+    .card-foot p { margin: 0 0 0.35rem; }
+    .card-credit { margin-top: 0.9rem; font-size: 0.78rem; }
+  </style>
+
+  <!-- GA4. The tag itself is NOT loaded in the head on purpose. On El Patron's
+       card, pulling Google's 180 KB script before the first paint cost 4.1 s on
+       the largest paint and 12 Lighthouse points; deferring it to after the
+       first contentful paint brought that back to about 2 s. The stub below
+       queues anything ga-events.js sends in the meantime, so no tap is lost.
+       What it does cost: a visitor who leaves before the first paint is not
+       counted. Same trade Anne accepted on the other card. -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-QFZS418E9R');
+
+    (function () {
+      var loaded = false;
+      function load() {
+        if (loaded) return;
+        loaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-QFZS418E9R';
+        document.head.appendChild(s);
+      }
+      try {
+        new PerformanceObserver(function (list, obs) {
+          if (list.getEntriesByName('first-contentful-paint').length) {
+            obs.disconnect();
+            load();
+          }
+        }).observe({ type: 'paint', buffered: true });
+      } catch (e) {}
+      // Browsers that report no paint entries, and background tabs, which may
+      // never paint at all.
+      setTimeout(load, 3000);
+    })();
+  </script>
+</head>
+<body class="card-page">
+  <main class="card">
+    <section class="card-face">
+      <img class="card-badge" src="images/high-desert-development-logo.png" width="800" height="709" alt="High Desert Development" fetchpriority="high">
+      <h1 class="card-name">Jerry Heller</h1>
+      <p class="card-role">Owner, General Contractor</p>
+      <p class="card-line">Every trade in house, and <strong>the owner on the job himself</strong>, from the first trench to the last walkthrough.</p>
+      <p class="card-licence">California Contractor License #771814</p>
+    </section>
+
+    <section class="card-actions" aria-label="Contact Jerry">
+      <a class="button button-primary" href="jerry-heller.vcf" download>Save my contact</a>
+      <div class="card-pair">
+        <!-- No .tel-link class here. It is declared after .button-secondary in
+             main.css and its `color: inherit` pulled the body's dark grey onto
+             the button, plus the underline it draws for phone links in body
+             copy. tap_to_call keys off the href, not the class, so the event
+             still fires. -->
+        <a class="button button-secondary" href="tel:+17603822658">Call</a>
+        <a class="button button-secondary" href="sms:+17603822658">Text</a>
+      </div>
+      <div class="card-pair">
+        <a class="button button-secondary" href="contact">Request an estimate</a>
+        <a class="button button-secondary" href="/">See our work</a>
+      </div>
+    </section>
+
+    <section class="card-review" aria-labelledby="review-heading">
+      <h2 id="review-heading">Scan to leave a review</h2>
+      <p>Happy with the work? Point your camera here. It takes a minute and it helps a small business a lot.</p>
+      <img class="card-qr" src="images/qr/high-desert-review-qr-600.png" width="600" height="600" alt="QR code that opens High Desert Development's Google review page" loading="lazy">
+      <a class="button button-primary" href="review" target="_blank" rel="noopener">Leave a Google review</a>
+      <a class="card-qr-download" href="images/qr/high-desert-review-qr.png" download>Download QR</a>
+    </section>
+  </main>
+
+  <footer class="card-foot">
+    <p><a href="/">highdesertdevelopment.com</a></p>
+    <p>&copy; 2026 High Desert Development</p>
+    <p>California Contractor License #771814</p>
+    <p class="card-credit">Made with <svg viewBox="0 0 24 24" width="12" height="12" fill="#d49a5b" aria-hidden="true" focusable="false" style="display:inline-block;vertical-align:-1px"><path d="M12 21s-7-4.6-9.5-9C.8 8.4 2.9 4.5 6.6 4.5c2 0 3.6 1.1 5.4 2.7 1.8-1.6 3.4-2.7 5.4-2.7 3.7 0 5.8 3.9 4.1 7.5C19 16.4 12 21 12 21z"/></svg> by <a href="https://hive-rise.com" target="_blank" rel="noopener">Hive-Rise</a></p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,19 @@
+# Redirects for highdesertdevelopment.com.
+# Cloudflare's Workers static assets reads this file and does not serve it,
+# the same way it reads _headers.
+#
+# /review is the address printed on the QR code and handed to customers. It
+# points here rather than straight at Google, so if Google ever changes the
+# review link, this one line changes and every code already printed, on a
+# card, a sign or an invoice, keeps working.
+#
+# 302 and not 301 on purpose: a permanent redirect gets cached hard by
+# browsers, and the whole point of this hop is that the target can change.
+#
+# The target is Jerry's own review box. The id is his Maps cid
+# 7254673624430590561 encoded as byte 0x09, the cid as eight little-endian
+# bytes, then 0x10 0x21. Decoded and opened before it was written here,
+# because the same link for another client arrived wrong by one letter and
+# sent people to Google's home page.
+/review   https://g.page/r/CWG6lHk5x61kECE/review   302
+/review/  https://g.page/r/CWG6lHk5x61kECE/review   302
